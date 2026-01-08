@@ -1,52 +1,39 @@
-Study Assistant: Quiz & Scheduler
-A lightweight, high-performance web application designed to streamline the learning process for the college courses. This tool combines an interactive quiz engine with a dynamic study scheduler to ensure consistent progress and knowledge retention.
+# 🎓 Study Assistant: Quiz & Scheduler
 
-🚀 Features
-1. Interactive Quiz Engine (index.html)
-Dynamic Data Loading: Parses complex quiz data from an external data.js file for easy content updates.
+A professional, lightweight, and high-performance web application suite designed to streamline the learning process for the college courses. This tool combines an interactive quiz engine with a dynamic study scheduler to ensure consistent progress and knowledge retention.
 
-Smart Filtering: Filter questions by specific topics/tags or use the instant search bar to find keywords.
+---
 
-Mobile-Optimized Interface: Responsive design with a sticky header and intuitive touch controls for studying on the go.
+## 🚀 Key Features
 
-Theme Support: Switch between Light and Dark modes to reduce eye strain during late-night study sessions.
+### 1. Interactive Quiz Engine (`index.html`)
+* **Dynamic Data Parsing:** Automatically loads and processes complex quiz data from an external `data.js` file.
+* **Smart Filtering:** Includes a tag-based filter and a real-time search bar to quickly locate specific topics or keywords.
+* **Mobile-First Design:** Optimized for smartphones with a sticky header, responsive layout, and large touch targets.
+* **Study Statistics:** Displays real-time stats including total questions, topics available, and current items showing.
+* **Theme Customization:** Features a built-in Dark Mode toggle to reduce eye strain during long study sessions.
 
-2. Strategic Study Scheduler (schedule.html)
-Daily Task Management: Organize study goals with a clear "Day-by-Day" view starting from your start date.
+### 2. Strategic Study Scheduler (`schedule.html`)
+* **Chronological Planning:** Organizes study tasks based on a specific course start date (Jan 7, 2026).
+* **Streak Tracking:** Encourages daily consistency with an automated "Day Streak" counter.
+* **Progress Visualization:** Each day features a dynamic progress bar that updates as you complete tasks.
+* **Task Management:** Add, delete, and toggle tasks easily with data persisted via `localStorage`.
+* **Navigation:** Built-in date picker and "Today" button for rapid navigation through your study timeline.
 
-Streak Tracking: Gamified "Day Streak" badge to motivate consistent daily activity.
+---
 
-Progress Analytics: Visual progress bars for each day to track completion rates.
+## 🛠️ Technical Stack
+* **Languages:** HTML5, CSS3, Vanilla JavaScript (ES6+).
+* **Typography:** Powered by the **Inter** font family for maximum readability on small screens.
+* **Data Storage:** Utilizes browser `localStorage` for privacy and offline persistence of your schedule.
+* **Deployment:** Fully compatible with **GitHub Pages** for free, secure hosting.
 
-Local Persistence: Uses localStorage to save your tasks directly in your browser without needing a database.
+---
 
-🛠️ Technical Stack
-Frontend: HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+).
-
-Fonts: Inter via Google Fonts for maximum readability.
-
-Architecture: Single Page Application (SPA) logic for smooth transitions and high performance on mobile devices.
-
-📁 File Structure
-Plaintext
-
-/d386-study-assistant
-├── index.html          # Main Quiz Application
-├── schedule.html       # Study Planning Tool
-├── data.js             # Question database (Not included in repo)
-└── README.md           # Documentation
-💻 Installation & Usage
-Clone or Download: Save all files into a single folder.
-
-Add Data: Ensure your data.js file is formatted correctly for the parseData function.
-
-Deploy: Upload to GitHub Pages for a live mobile-friendly link.
-
-Local Storage: Your data is saved locally on your device. Clearing browser cache may remove your schedule data.
-
-🎨 UI/UX Design Principles
-Accessibility: High contrast ratios and large touch targets for mobile users.
-
-Interactivity: Immediate visual feedback on task completion and quiz answers.
-
-Efficiency: Designed to minimize clicks, allowing you to focus on the content rather than the navigation.
+## 📁 File Structure
+```text
+/study-tool
+├── index.html          # Main Quiz Application (Home)
+├── schedule.html       # Study Planning & Tracking Tool
+├── data.js             # Question database (Required for Quiz)
+└── README.md           # Documentation & Project Overview
