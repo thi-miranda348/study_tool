@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz App</title>
+  <title>Quiz Master - Enhanced</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +59,6 @@
       line-height: 1.6;
       padding: 0;
       padding-bottom: 80px;
-      /* Space for fixed footer */
       transition: background-color 0.3s ease, color 0.3s ease;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -122,6 +121,7 @@
     .top-actions {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     /* ========== CONTROLS ========== */
@@ -284,6 +284,7 @@
       gap: 3rem;
       margin-bottom: 2rem;
       box-shadow: var(--shadow);
+      flex-wrap: wrap;
     }
 
     .stat-item {
@@ -307,6 +308,10 @@
       letter-spacing: 0.5px;
     }
 
+    .stat-value.green {
+      color: var(--green);
+    }
+
     /* ========== QUESTION CARD ========== */
     .q-card {
       background: var(--bg);
@@ -322,6 +327,11 @@
     .q-card:hover {
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
       transform: translateY(-2px);
+    }
+
+    .q-card.completed {
+      border-color: var(--green);
+      background: var(--bg-subtle);
     }
 
     .q-header {
@@ -382,11 +392,20 @@
       transform: translateX(4px);
     }
 
+    .option.disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .option.disabled:hover {
+      transform: none;
+    }
+
     .option.correct {
-      background: var(--blue);
-      color: #FFFFFF;
-      border-color: var(--blue);
-      box-shadow: var(--shadow-md);
+      background: #DCFCE7;
+      border-color: var(--green);
+      color: #14532D;
+      cursor: default;
     }
 
     .option.correct:hover {
@@ -398,8 +417,8 @@
       margin-right: 1.4rem;
       font-weight: 900;
       font-size: 1.8rem;
-      background: var(--yellow);
-      color: #000000;
+      background: var(--green);
+      color: white;
       width: 3.2rem;
       height: 3.2rem;
       display: flex;
@@ -408,6 +427,38 @@
       border-radius: 8px;
       flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .option.wrong {
+      background: #FEE2E2;
+      border-color: var(--red);
+      color: #7F1D1D;
+      cursor: default;
+    }
+
+    .option.wrong::before {
+      content: "✕";
+      margin-right: 1.4rem;
+      font-weight: 900;
+      font-size: 1.8rem;
+      background: var(--red);
+      color: white;
+      width: 3.2rem;
+      height: 3.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .option.selected {
+      background: #EBF5FF;
+      border-color: var(--blue);
+      color: var(--blue-dark);
+      box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
+      font-weight: 700;
+      transform: translateX(4px);
     }
 
     /* ========== EXPLANATION ========== */
@@ -420,6 +471,12 @@
       font-size: 1.5rem;
       line-height: 1.7;
       font-weight: 500;
+      display: none;
+    }
+
+    .explain.show {
+      display: block;
+      animation: fadeInUp 0.5s ease;
     }
 
     .explain strong {
@@ -443,67 +500,18 @@
     }
 
     /* ========== EXAM MODE STYLES ========== */
+    .exam-mode .explain {
+      display: none !important;
+    }
+
     .exam-mode .option.correct {
       background: var(--bg-subtle);
       color: var(--text);
       border-color: var(--border);
-      box-shadow: none;
     }
 
     .exam-mode .option.correct::before {
       display: none;
-    }
-
-    .exam-mode .explain {
-      display: none;
-    }
-
-    .option.selected {
-      background: #EBF5FF !important;
-      border-color: var(--blue) !important;
-      color: var(--blue-dark) !important;
-      box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2) !important;
-      font-weight: 700 !important;
-      transform: translateX(4px);
-    }
-
-    /* ========== EXAM REVIEWED STYLES ========== */
-    .exam-reviewed .option.correct {
-      background: #DCFCE7 !important;
-      border-color: var(--green) !important;
-      color: #14532D !important;
-    }
-
-    .exam-reviewed .option.correct::before {
-      display: flex;
-      background: var(--green);
-      color: white;
-    }
-
-    .exam-reviewed .option.selected:not(.correct) {
-      background: #FEE2E2 !important;
-      border-color: var(--red) !important;
-      color: #7F1D1D !important;
-    }
-
-    .exam-reviewed .option.selected:not(.correct)::before {
-      content: "✕";
-      display: flex;
-      margin-right: 1.4rem;
-      font-weight: 900;
-      font-size: 1.8rem;
-      background: var(--red);
-      color: white;
-      width: 3.2rem;
-      height: 3.2rem;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-    }
-
-    .exam-reviewed .explain {
-      display: block;
-      animation: fadeInUp 0.5s ease;
     }
 
     /* ========== EXAM ACTIONS BAR ========== */
@@ -518,8 +526,10 @@
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
       display: none;
       justify-content: center;
+      align-items: center;
       gap: 2rem;
       z-index: 2000;
+      flex-wrap: wrap;
     }
 
     body.dark-mode .exam-actions {
@@ -534,7 +544,95 @@
       font-weight: 800;
       font-size: 1.8rem;
       color: var(--blue);
-      margin-right: 1rem;
+    }
+
+    /* ========== MODAL ========== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 3000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.3s ease;
+    }
+
+    .modal-header {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--blue);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .modal-body {
+      margin-bottom: 2rem;
+    }
+
+    .exam-history-item {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .exam-history-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .exam-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .exam-score {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--blue);
+    }
+
+    .exam-date {
+      font-size: 1.3rem;
+      color: var(--text-light);
+    }
+
+    .exam-details {
+      font-size: 1.4rem;
+      color: var(--text-light);
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
     }
 
     /* ========== EMPTY STATE ========== */
@@ -572,6 +670,28 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
       }
     }
 
@@ -684,6 +804,10 @@
       .container {
         padding: 2rem 1.6rem;
       }
+
+      .modal-content {
+        padding: 2rem;
+      }
     }
   </style>
 </head>
@@ -698,8 +822,9 @@
         </div>
         <div class="top-actions">
           <button class="btn btn-primary" onclick="app.startExam()">🚀 Start Exam</button>
-          <button class="btn btn-primary" onclick="window.location.href='index.html'">📅 Schedule</button>
-          <button class="btn theme-toggle btn-icon" onclick="app.toggleTheme()">◑</button>
+          <button class="btn" onclick="app.showExamHistory()">📊 History</button>
+          <button class="btn" onclick="app.resetProgress()">🔄 Reset Progress</button>
+          <button class="btn theme-toggle btn-icon" onclick="app.toggleTheme()">◐</button>
         </div>
       </div>
 
@@ -738,6 +863,10 @@
         <span class="stat-label">Topics</span>
       </div>
       <div class="stat-item">
+        <span class="stat-value green" id="studiedCount">0</span>
+        <span class="stat-label">Studied</span>
+      </div>
+      <div class="stat-item">
         <span class="stat-value" id="currentShowing">0</span>
         <span class="stat-label">Showing</span>
       </div>
@@ -757,106 +886,243 @@
     <button class="btn" onclick="app.exitExam()">Exit Exam</button>
   </div>
 
+  <div class="modal" id="historyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>📊</span>
+        <span>Exam History</span>
+      </div>
+      <div class="modal-body" id="historyList"></div>
+      <div class="modal-actions">
+        <button class="btn" onclick="app.closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
   <script src="data1.js"></script>
 
   <script>
-    // ========== APPLICATION STATE ==========
+    // ========== APPLICATION STATE MANAGER ==========
+    const StorageManager = {
+      KEYS: {
+        STUDIED: 'quiz_studied_questions',
+        EXAM_HISTORY: 'quiz_exam_history',
+        THEME: 'quiz_theme'
+      },
+
+      getStudiedQuestions() {
+        const data = localStorage.getItem(this.KEYS.STUDIED);
+        return data ? JSON.parse(data) : {};
+      },
+
+      saveStudiedQuestion(questionId, answerIndex, isCorrect) {
+        const studied = this.getStudiedQuestions();
+        studied[questionId] = {
+          answer: answerIndex,
+          correct: isCorrect,
+          timestamp: Date.now()
+        };
+        localStorage.setItem(this.KEYS.STUDIED, JSON.stringify(studied));
+      },
+
+      getExamHistory() {
+        const data = localStorage.getItem(this.KEYS.EXAM_HISTORY);
+        return data ? JSON.parse(data) : [];
+      },
+
+      saveExamResult(examData) {
+        const history = this.getExamHistory();
+        history.unshift(examData);
+        // Keep only last 20 exams
+        if (history.length > 20) history.pop();
+        localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify(history));
+      },
+
+      clearStudiedQuestions() {
+        localStorage.removeItem(this.KEYS.STUDIED);
+      },
+
+      getTheme() {
+        return localStorage.getItem(this.KEYS.THEME) || 'light';
+      },
+
+      saveTheme(theme) {
+        localStorage.setItem(this.KEYS.THEME, theme);
+      }
+    };
+
+    // ========== EXAM GENERATOR ==========
+    const ExamGenerator = {
+      WEIGHTS: {
+        "Hardware": 7,
+        "Operating Systems": 7,
+        "Virtual Environment": 6,
+        "Networking": 10,
+        "Non-functional Requirements": 5,
+        "IDEs and Text Editors": 5,
+        "Customization": 10,
+        "Cloud Computing": 10
+      },
+      TOTAL_QUESTIONS: 60,
+
+      generate(allQuestions, studiedQuestions) {
+        const questionsByTag = this.groupByTag(allQuestions);
+        const examQuestions = [];
+        const usedIds = new Set();
+
+        // Prioritize unstudied questions
+        const unstudied = allQuestions.filter(q => !studiedQuestions[q.id]);
+        const studied = allQuestions.filter(q => studiedQuestions[q.id]);
+
+        // Select questions by weight
+        for (const [tag, percent] of Object.entries(this.WEIGHTS)) {
+          const count = Math.round((percent / 100) * this.TOTAL_QUESTIONS);
+          const tagQuestions = questionsByTag[tag] || [];
+
+          // Separate unstudied and studied for this tag
+          const tagUnstudied = tagQuestions.filter(q => !studiedQuestions[q.id]);
+          const tagStudied = tagQuestions.filter(q => studiedQuestions[q.id]);
+
+          // Prefer unstudied questions
+          const pool = [...this.shuffle(tagUnstudied), ...this.shuffle(tagStudied)];
+          const selected = pool.slice(0, count);
+
+          selected.forEach(q => {
+            examQuestions.push(q);
+            usedIds.add(q.id);
+          });
+        }
+
+        // Fill remaining slots with unstudied questions first
+        if (examQuestions.length < this.TOTAL_QUESTIONS) {
+          const remaining = [...unstudied, ...studied].filter(q => !usedIds.has(q.id));
+          const needed = this.TOTAL_QUESTIONS - examQuestions.length;
+          examQuestions.push(...this.shuffle(remaining).slice(0, needed));
+        }
+
+        return this.shuffle(examQuestions);
+      },
+
+      groupByTag(questions) {
+        const grouped = {};
+        questions.forEach(q => {
+          if (!grouped[q.tag]) grouped[q.tag] = [];
+          grouped[q.tag].push(q);
+        });
+        return grouped;
+      },
+
+      shuffle(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+    };
+
+    // ========== MAIN APPLICATION ==========
     const app = {
       // Configuration
       ITEMS_PER_PAGE: 60,
-      EXAM_CONFIG: {
-        totalQuestions: 60,
-        weights: {
-          "Hardware": 7,
-          "Operating Systems": 7,
-          "Virtual Environment": 6,
-          "Networking": 10,
-          "Non-functional Requirements": 5,
-          "IDEs and Text Editors": 5,
-          "Customization": 10,
-          "Cloud Computing": 10
-        }
-      },
 
       // State
       allQuestions: [],
       filteredQuestions: [],
+      studiedQuestions: {},
       currentPage: 1,
-      isExamMode: false,
-      isExamReviewed: false,
-      userAnswers: {},
+      mode: 'study', // 'study', 'exam', 'exam-review'
+      currentExam: null,
 
       // ========== INITIALIZATION ==========
       init() {
         if (typeof rawQuizData === 'undefined') {
-          console.error('data.js not loaded');
+          console.error('data1.js not loaded');
           return;
         }
 
-        let fullData = rawQuizData;
-        if (typeof rawQuizData_Part2 !== 'undefined') {
-          fullData += "\n---\n" + rawQuizData_Part2;
-        }
-
-        this.allQuestions = this.parseData(fullData);
-        this.filteredQuestions = [...this.allQuestions];
+        this.loadData();
+        this.loadStudiedQuestions();
         this.populateTagDropdown();
         this.updateStats();
         this.renderPage();
         this.loadTheme();
       },
 
-      // ========== DATA PARSING ==========
+      loadData() {
+        let fullData = rawQuizData;
+        if (typeof rawQuizData_Part2 !== 'undefined') {
+          fullData += "\n---\n" + rawQuizData_Part2;
+        }
+        this.allQuestions = this.parseData(fullData);
+        this.filteredQuestions = [...this.allQuestions];
+      },
+
+      loadStudiedQuestions() {
+        this.studiedQuestions = StorageManager.getStudiedQuestions();
+      },
+
       parseData(text) {
         if (!text) return [];
         return text.trim().split('---').map((block, idx) => {
           const lines = block.trim().split('\n').filter(l => l.trim());
           if (lines.length < 2) return null;
 
-          let q = { id: idx, q: lines[0], opts: [], ans: 0, exp: "", tag: "General" };
-          let optCnt = 0;
+          const question = {
+            id: idx,
+            q: lines[0],
+            opts: [],
+            ans: 0,
+            exp: "",
+            tag: "General"
+          };
 
+          let optCount = 0;
           for (let i = 1; i < lines.length; i++) {
             let line = lines[i].trim();
+
             if (line.startsWith('>> Tag:')) {
-              q.tag = line.replace('>> Tag:', '').trim();
+              question.tag = line.replace('>> Tag:', '').trim();
             } else if (line.startsWith('>>')) {
-              q.exp = line.substring(2).replace(/^(Giải thích:|Explain:)\s*/i, '').trim();
+              question.exp = line.substring(2).replace(/^(Giải thích:|Explain:)\s*/i, '').trim();
             } else {
               if (line.startsWith('*')) {
-                q.ans = optCnt;
+                question.ans = optCount;
                 line = line.substring(1);
               }
-              q.opts.push(line.replace(/^[A-D a-d][\.\)]\s*/, ''));
-              optCnt++;
+              question.opts.push(line.replace(/^[A-D a-d][\.\)]\s*/, ''));
+              optCount++;
             }
           }
-          return q;
+          return question;
         }).filter(item => item !== null);
       },
 
       // ========== UI SETUP ==========
       populateTagDropdown() {
-        const tagSet = new Set();
-        this.allQuestions.forEach(q => tagSet.add(q.tag));
+        const tags = new Set(this.allQuestions.map(q => q.tag));
+        const select = document.getElementById('tagFilter');
+        select.innerHTML = '<option value="ALL">All Topics</option>';
 
-        const selectEl = document.getElementById('tagFilter');
-        selectEl.innerHTML = '<option value="ALL">All Topics</option>';
-
-        Array.from(tagSet).sort().forEach(tag => {
+        Array.from(tags).sort().forEach(tag => {
           const option = document.createElement('option');
           option.value = tag;
-          option.innerText = tag;
-          selectEl.appendChild(option);
+          option.textContent = tag;
+          select.appendChild(option);
         });
 
-        document.getElementById('totalTopics').innerText = tagSet.size;
+        document.getElementById('totalTopics').textContent = tags.size;
       },
 
       updateStats() {
-        document.getElementById('totalQuestions').innerText = this.isExamMode ? this.filteredQuestions.length : this.allQuestions.length;
+        const studiedCount = Object.keys(this.studiedQuestions).length;
+        document.getElementById('totalQuestions').textContent = this.allQuestions.length;
+        document.getElementById('studiedCount').textContent = studiedCount;
+
         const showing = Math.min(this.filteredQuestions.length, this.ITEMS_PER_PAGE);
-        document.getElementById('currentShowing').innerText = this.filteredQuestions.length === 0 ? 0 : showing;
+        document.getElementById('currentShowing').textContent =
+          this.filteredQuestions.length === 0 ? 0 : showing;
       },
 
       // ========== RENDERING ==========
@@ -864,15 +1130,10 @@
         const container = document.getElementById('quiz-list');
         container.innerHTML = '';
 
-        // Update container classes
-        container.className = this.isExamMode ? 'exam-mode' : '';
-        if (this.isExamReviewed) container.classList.add('exam-reviewed');
-
         const totalPages = Math.ceil(this.filteredQuestions.length / this.ITEMS_PER_PAGE);
-        if (this.currentPage > totalPages) this.currentPage = totalPages || 1;
-        if (this.currentPage < 1) this.currentPage = 1;
+        this.currentPage = Math.max(1, Math.min(this.currentPage, totalPages || 1));
 
-        document.getElementById('pageInfo').innerText = `${this.currentPage}/${totalPages || 1}`;
+        document.getElementById('pageInfo').textContent = `${this.currentPage}/${totalPages || 1}`;
 
         const start = (this.currentPage - 1) * this.ITEMS_PER_PAGE;
         const end = start + this.ITEMS_PER_PAGE;
@@ -883,17 +1144,22 @@
           return;
         }
 
-        pageItems.forEach(q => {
-          container.appendChild(this.renderQuestionCard(q));
-        });
-
+        pageItems.forEach(q => container.appendChild(this.renderQuestionCard(q)));
         window.scrollTo({ top: 0, behavior: 'smooth' });
         this.updateStats();
       },
 
       renderQuestionCard(q) {
         const card = document.createElement('div');
+        const isStudied = this.studiedQuestions[q.id];
+
         card.className = 'q-card';
+        if (this.mode === 'study' && isStudied) {
+          card.classList.add('completed');
+        }
+        if (this.mode === 'exam') {
+          card.classList.add('exam-mode');
+        }
         card.id = `card-${q.id}`;
 
         let html = `
@@ -904,21 +1170,57 @@
           <div class="q-text">${q.q}</div>
         `;
 
-        q.opts.forEach((opt, oIdx) => {
-          let cls = 'option';
-          if (oIdx === q.ans) cls += ' correct';
-          if (this.userAnswers[q.id] === oIdx) cls += ' selected';
+        q.opts.forEach((opt, idx) => {
+          const classes = this.getOptionClasses(q, idx);
+          const clickable = this.isOptionClickable(q);
+          const handler = clickable ? `onclick="app.handleOptionClick(${q.id}, ${idx})"` : '';
 
-          const clickHandler = this.isExamMode && !this.isExamReviewed
-            ? `onclick="app.selectOption(${q.id}, ${oIdx})"`
-            : '';
-
-          html += `<div class="${cls}" ${clickHandler}>${opt}</div>`;
+          html += `<div class="option ${classes}" ${handler}>${opt}</div>`;
         });
 
-        html += `<div class="explain"><strong><span>💡</span>Explanation</strong>${q.exp || "No explanation provided."}</div>`;
+        const showExplanation = this.shouldShowExplanation(q);
+        const explainClass = showExplanation ? 'explain show' : 'explain';
+        html += `<div class="${explainClass}"><strong><span>💡</span>Explanation</strong>${q.exp || "No explanation provided."}</div>`;
+
         card.innerHTML = html;
         return card;
+      },
+
+      getOptionClasses(q, optionIndex) {
+        const classes = [];
+        const studiedData = this.studiedQuestions[q.id];
+        const examAnswer = this.currentExam?.answers[q.id];
+
+        if (this.mode === 'study' && studiedData) {
+          if (optionIndex === q.ans) classes.push('correct');
+          if (studiedData.answer === optionIndex && optionIndex !== q.ans) {
+            classes.push('wrong');
+          }
+          classes.push('disabled');
+        } else if (this.mode === 'exam') {
+          if (examAnswer === optionIndex) classes.push('selected');
+        } else if (this.mode === 'exam-review') {
+          if (optionIndex === q.ans) classes.push('correct');
+          if (examAnswer === optionIndex && examAnswer !== q.ans) {
+            classes.push('wrong');
+          }
+        }
+
+        return classes.join(' ');
+      },
+
+      isOptionClickable(q) {
+        if (this.mode === 'study') {
+          return !this.studiedQuestions[q.id];
+        }
+        return this.mode === 'exam';
+      },
+
+      shouldShowExplanation(q) {
+        if (this.mode === 'study') {
+          return !!this.studiedQuestions[q.id];
+        }
+        return this.mode === 'exam-review';
       },
 
       renderEmptyState() {
@@ -931,7 +1233,246 @@
         `;
       },
 
-      // ========== NAVIGATION ==========
+      // ========== STUDY MODE ==========
+      handleOptionClick(qId, optIdx) {
+        const question = this.allQuestions.find(q => q.id === qId);
+        if (!question) return;
+
+        if (this.mode === 'study') {
+          this.handleStudyMode(qId, optIdx, question);
+        } else if (this.mode === 'exam') {
+          this.handleExamMode(qId, optIdx);
+        }
+      },
+
+      handleStudyMode(qId, optIdx, question) {
+        if (this.studiedQuestions[qId]) return;
+
+        const isCorrect = optIdx === question.ans;
+        StorageManager.saveStudiedQuestion(qId, optIdx, isCorrect);
+        this.studiedQuestions[qId] = { answer: optIdx, correct: isCorrect };
+
+        // Update the card
+        const card = document.getElementById(`card-${qId}`);
+        if (card) {
+          card.classList.add('completed');
+
+          const options = card.querySelectorAll('.option');
+          options.forEach((opt, idx) => {
+            opt.classList.add('disabled');
+            opt.removeAttribute('onclick');
+
+            if (idx === question.ans) {
+              opt.classList.add('correct');
+            }
+            if (idx === optIdx && idx !== question.ans) {
+              opt.classList.add('wrong');
+            }
+          });
+
+          const explanation = card.querySelector('.explain');
+          if (explanation) {
+            explanation.classList.add('show');
+          }
+        }
+
+        this.updateStats();
+      },
+
+      handleExamMode(qId, optIdx) {
+        if (!this.currentExam) return;
+
+        this.currentExam.answers[qId] = optIdx;
+
+        // Update UI
+        const card = document.getElementById(`card-${qId}`);
+        if (card) {
+          const options = card.querySelectorAll('.option');
+          options.forEach((opt, idx) => {
+            if (idx === optIdx) {
+              opt.classList.add('selected');
+            } else {
+              opt.classList.remove('selected');
+            }
+          });
+        }
+
+        this.updateExamProgress();
+      },
+
+      // ========== EXAM MODE ==========
+      startExam() {
+        if (this.allQuestions.length === 0) {
+          alert("No questions available");
+          return;
+        }
+
+        const examQuestions = ExamGenerator.generate(this.allQuestions, this.studiedQuestions);
+
+        this.currentExam = {
+          id: Date.now(),
+          questions: examQuestions,
+          answers: {},
+          startTime: Date.now()
+        };
+
+        this.filteredQuestions = examQuestions;
+        this.mode = 'exam';
+        this.currentPage = 1;
+
+        // Update UI
+        document.getElementById('appTitle').textContent = '⏱️ Exam in Progress';
+        document.getElementById('examActions').classList.add('active');
+        document.getElementById('btnSubmit').style.display = 'inline-flex';
+        document.getElementById('scoreDisplay').textContent = '';
+        document.getElementById('searchInput').value = "";
+        document.getElementById('tagFilter').value = "ALL";
+
+        this.renderPage();
+        this.updateExamProgress();
+      },
+
+      updateExamProgress() {
+        if (!this.currentExam) return;
+
+        const answered = Object.keys(this.currentExam.answers).length;
+        const total = this.currentExam.questions.length;
+        document.getElementById('scoreDisplay').textContent =
+          `Progress: ${answered}/${total}`;
+      },
+
+      submitExam() {
+        if (!this.currentExam) return;
+
+        const answered = Object.keys(this.currentExam.answers).length;
+        const total = this.currentExam.questions.length;
+
+        if (answered < total) {
+          const unanswered = total - answered;
+          if (!confirm(`You have ${unanswered} unanswered questions. Submit anyway?`)) {
+            return;
+          }
+        }
+
+        let correctCount = 0;
+        this.currentExam.questions.forEach(q => {
+          if (this.currentExam.answers[q.id] === q.ans) {
+            correctCount++;
+          }
+        });
+
+        const score = Math.round((correctCount / total) * 100);
+        this.currentExam.endTime = Date.now();
+        this.currentExam.score = score;
+        this.currentExam.correct = correctCount;
+        this.currentExam.total = total;
+
+        // Save to history
+        StorageManager.saveExamResult({
+          id: this.currentExam.id,
+          date: this.currentExam.endTime,
+          score: score,
+          correct: correctCount,
+          total: total,
+          questions: this.currentExam.questions.map(q => q.id),
+          answers: this.currentExam.answers
+        });
+
+        // Switch to review mode
+        this.mode = 'exam-review';
+        document.getElementById('btnSubmit').style.display = 'none';
+        document.getElementById('scoreDisplay').textContent =
+          `Score: ${score}% (${correctCount}/${total})`;
+
+        this.renderPage();
+        alert(`Exam Complete!\n\nScore: ${score}%\nCorrect: ${correctCount} out of ${total}`);
+      },
+
+      exitExam() {
+        if (this.mode === 'exam') {
+          if (!confirm("Exit exam and return to study mode?\nYour progress will be lost.")) {
+            return;
+          }
+        }
+
+        this.mode = 'study';
+        this.currentExam = null;
+        this.filteredQuestions = [...this.allQuestions];
+        this.currentPage = 1;
+
+        // Update UI
+        document.getElementById('appTitle').textContent = 'Quiz Master';
+        document.getElementById('examActions').classList.remove('active');
+
+        this.renderPage();
+      },
+
+      // ========== EXAM HISTORY ==========
+      showExamHistory() {
+        const history = StorageManager.getExamHistory();
+        const modal = document.getElementById('historyModal');
+        const listContainer = document.getElementById('historyList');
+
+        if (history.length === 0) {
+          listContainer.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-icon">📊</div>
+              <div class="empty-text">No exam history</div>
+              <div class="empty-subtext">Complete an exam to see your results here</div>
+            </div>
+          `;
+        } else {
+          listContainer.innerHTML = history.map(exam => `
+            <div class="exam-history-item" onclick="app.reviewExam(${exam.id})">
+              <div class="exam-info">
+                <span class="exam-score">${exam.score}%</span>
+                <span class="exam-date">${new Date(exam.date).toLocaleString()}</span>
+              </div>
+              <div class="exam-details">
+                ${exam.correct}/${exam.total} correct • Click to review
+              </div>
+            </div>
+          `).join('');
+        }
+
+        modal.classList.add('show');
+      },
+
+      reviewExam(examId) {
+        const history = StorageManager.getExamHistory();
+        const exam = history.find(e => e.id === examId);
+
+        if (!exam) return;
+
+        this.currentExam = {
+          id: exam.id,
+          questions: exam.questions.map(id => this.allQuestions.find(q => q.id === id)).filter(q => q),
+          answers: exam.answers,
+          score: exam.score,
+          correct: exam.correct,
+          total: exam.total
+        };
+
+        this.filteredQuestions = this.currentExam.questions;
+        this.mode = 'exam-review';
+        this.currentPage = 1;
+
+        // Update UI
+        document.getElementById('appTitle').textContent = '📋 Reviewing Exam';
+        document.getElementById('examActions').classList.add('active');
+        document.getElementById('btnSubmit').style.display = 'none';
+        document.getElementById('scoreDisplay').textContent =
+          `Score: ${exam.score}% (${exam.correct}/${exam.total})`;
+
+        this.closeModal();
+        this.renderPage();
+      },
+
+      closeModal() {
+        document.getElementById('historyModal').classList.remove('show');
+      },
+
+      // ========== NAVIGATION & SEARCH ==========
       prevPage() {
         if (this.currentPage > 1) {
           this.currentPage--;
@@ -948,9 +1489,7 @@
       },
 
       handleSearch() {
-        // If in exam mode, we generally shouldn't filter, or we should exit exam mode.
-        // For simplicity, if searching during exam, we exit exam mode to show results.
-        if (this.isExamMode) {
+        if (this.mode === 'exam') {
           this.exitExam();
         }
 
@@ -969,142 +1508,28 @@
         this.renderPage();
       },
 
-      // ========== THEME ==========
-      toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      },
-
-      loadTheme() {
-        if (localStorage.getItem('theme') === 'dark') {
-          document.body.classList.add('dark-mode');
-        }
-      },
-
-      // ========== EXAM MODE ==========
-      startExam() {
-        if (!this.allQuestions || this.allQuestions.length === 0) {
-          alert("No questions available");
+      // ========== UTILITIES ==========
+      resetProgress() {
+        if (!confirm("Are you sure you want to reset all study progress?\nThis cannot be undone.")) {
           return;
         }
 
-        const examQuestions = this.generateExamQuestions();
-        this.filteredQuestions = this.shuffle(examQuestions);
-        this.isExamMode = true;
-        this.isExamReviewed = false;
-        this.userAnswers = {};
-        this.currentPage = 1;
-
-        // Update UI
-        document.getElementById('appTitle').innerHTML = '⏱️ Exam in Progress';
-        document.getElementById('examActions').classList.add('active');
-        document.getElementById('btnSubmit').style.display = 'inline-flex';
-        document.getElementById('scoreDisplay').innerText = '';
-        document.getElementById('searchInput').value = "";
-        document.getElementById('tagFilter').value = "ALL";
-
+        StorageManager.clearStudiedQuestions();
+        this.studiedQuestions = {};
         this.renderPage();
-        alert(`Exam Started!\n${this.filteredQuestions.length} questions\nSelect your answers and click 'Submit & Score' when finished.`);
+        alert("Study progress has been reset.");
       },
 
-      generateExamQuestions() {
-        const examQuestions = [];
-        const usedIds = new Set();
-        const questionsByTag = {};
+      toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        StorageManager.saveTheme(isDark ? 'dark' : 'light');
+      },
 
-        // Group questions by tag
-        this.allQuestions.forEach(q => {
-          if (!questionsByTag[q.tag]) questionsByTag[q.tag] = [];
-          questionsByTag[q.tag].push(q);
-        });
-
-        // Select questions based on weights
-        for (const [tag, percent] of Object.entries(this.EXAM_CONFIG.weights)) {
-          const count = Math.round((percent / 100) * this.EXAM_CONFIG.totalQuestions);
-          if (questionsByTag[tag]) {
-            const shuffled = this.shuffle([...questionsByTag[tag]]);
-            const selected = shuffled.slice(0, count);
-            selected.forEach(q => {
-              examQuestions.push(q);
-              usedIds.add(q.id);
-            });
-          }
+      loadTheme() {
+        if (StorageManager.getTheme() === 'dark') {
+          document.body.classList.add('dark-mode');
         }
-
-        // Fill remaining slots if needed
-        if (examQuestions.length < this.EXAM_CONFIG.totalQuestions) {
-          const remaining = this.allQuestions.filter(q => !usedIds.has(q.id));
-          const needed = this.EXAM_CONFIG.totalQuestions - examQuestions.length;
-          examQuestions.push(...this.shuffle(remaining).slice(0, needed));
-        }
-
-        return examQuestions;
-      },
-
-      selectOption(qId, optIdx) {
-        if (this.isExamReviewed) return;
-
-        this.userAnswers[qId] = optIdx;
-
-        // Update UI
-        const card = document.getElementById(`card-${qId}`);
-        const options = card.querySelectorAll('.option');
-        options.forEach((opt, idx) => {
-          if (idx === optIdx) {
-            opt.classList.add('selected');
-          } else {
-            opt.classList.remove('selected');
-          }
-        });
-      },
-
-      submitExam() {
-        if (!confirm("Are you sure you want to submit your exam?")) return;
-
-        let correctCount = 0;
-        this.filteredQuestions.forEach(q => {
-          if (this.userAnswers[q.id] === q.ans) {
-            correctCount++;
-          }
-        });
-
-        const score = Math.round((correctCount / this.filteredQuestions.length) * 100);
-
-        // Update UI
-        this.isExamReviewed = true;
-        document.getElementById('btnSubmit').style.display = 'none';
-        document.getElementById('scoreDisplay').innerText =
-          `Score: ${score}% (${correctCount}/${this.filteredQuestions.length})`;
-
-        this.renderPage();
-        alert(`Exam Complete!\n\nScore: ${score}%\nCorrect: ${correctCount} out of ${this.filteredQuestions.length}`);
-      },
-
-      exitExam() {
-        if (!confirm("Exit exam and return to study mode?\nYour progress will be lost.")) return;
-
-        this.isExamMode = false;
-        this.isExamReviewed = false;
-        this.userAnswers = {};
-        this.filteredQuestions = [...this.allQuestions];
-        this.currentPage = 1;
-
-        // Update UI
-        document.getElementById('appTitle').innerHTML = 'Quiz Master';
-        document.getElementById('examActions').classList.remove('active');
-
-        this.renderPage();
-      },
-
-      // ========== UTILITIES ==========
-      shuffle(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
       }
     };
 
