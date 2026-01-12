@@ -5,7 +5,7 @@ B. Workstation Operating System
 *C. NoSQL Document Databases
 D. Relational Database Management System
 >> Explain: MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. 
->> Tag: Databases
+>> Tag: Cloud Computing
 ---
 Which of the following is an example of an interpreted language?
 *A. Python
@@ -13,7 +13,7 @@ B. Php
 C. Javascript
 D. Java
 >> Explain: An interpreted language is a type of programming language for which most of its implementations execute instructions directly and freely, without previously compiling a program into machine-language instructions. Python is a prime example.
->> Tag: Programming
+>> Tag: Customization
 ---
 This chip focuses on managing slower peripherals like USB ports and audio.
 A. Silicon chip
@@ -29,7 +29,7 @@ B. Rootkit
 C. Adware
 *D. Ransomware
 >> Explain: Ransomware is a type of malware from cryptovirology that threatens to publish the victim's personal data or perpetually block access to it unless a ransom is paid.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 A type of malware that disguises itself as legitimate software
 A. Virus
@@ -37,7 +37,7 @@ B. Worm
 *C. Trojan Horse
 D. Logic Bomb
 >> Explain: A Trojan Horse or Trojan is any malware which misleads users of its true intent. The term is derived from the Ancient Greek story of the deceptive Trojan Horse that led to the fall of the city of Troy.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 What is Hadoop primarily used for?
 A. Managing small databases
@@ -45,7 +45,7 @@ A. Managing small databases
 C. Creating software applications
 D. Designing web interfaces
 >> Explain: Apache Hadoop is a collection of open-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation. 
->> Tag: Programming
+>> Tag: Cloud Computing
 ---
 iPads need to be connected in a warehouse. Which one should they use?
 *A. Wifi
@@ -61,7 +61,7 @@ B. Mini-ITX
 C. VPN
 *D. Hypervisor
 >> Explain: A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. 
->> Tag: Virtualization
+>> Tag: Virtual Environment
 ---
 Which type of malicious software records every keystroke made on a computer to capture sensitive information, such as passwords and credit card details
 A. Trojan
@@ -69,7 +69,7 @@ B. Spyware
 *C. Keylogger
 D. Backdoor
 >> Explain: Keylogging, often referred to as keystroke logging or keyboard capturing, is the action of recording the keys struck on a keyboard, typically covertly.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 Which of the following tech stacks is most similar to the MEAN stack?
 A. LAMP stack
@@ -77,7 +77,7 @@ B. Wamp stack
 *C. MEVN stack
 D. Mern stack
 >> Explain: MEVN (MongoDB, Express, Vue, Node) and MERN (MongoDB, Express, React, Node) are highly similar to MEAN (MongoDB, Express, Angular, Node), only differing in the frontend framework used.
->> Tag: Tech Stacks
+>> Tag: Customization
 ---
 What programming language does Apple iOS use?
 A. Mini-ITX
@@ -85,7 +85,7 @@ A. Mini-ITX
 C. Java
 D. Python
 >> Explain: Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community for iOS, iPadOS, macOS, tvOS, and watchOS.
->> Tag: Programming
+>> Tag: Customization
 ---
 Which of the following is one of the three basic components required for a computer to run?
 A. Read-only memory (rom)
@@ -101,7 +101,7 @@ B. armored virus
 *C. polymorphic virus
 D. boot sector virus
 >> Explain: A polymorphic virus is a complicated computer virus that affects data types and functions. It is a self-encrypted virus designed to avoid detection by a scanner.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 What is responsible for moving data from one place to another?
 A. Data Copying Instructions
@@ -133,7 +133,7 @@ B. Constant
 C. Class
 D. String
 >> Explain: In computer programming, a variable is an abstract storage location paired with an associated symbolic name, which contains some known or unknown quantity of information referred to as a value.
->> Tag: Programming
+>> Tag: Customization
 ---
 A group of people wants to format the user interface of a website. Which tool should they use?
 A. CMS
@@ -141,7 +141,7 @@ B. PHP
 *C. CSS
 D. XML
 >> Explain: Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML or XML.
->> Tag: Web Development
+>> Tag: Customization
 ---
 What is the primary memory of a computer
 A. ROM
@@ -173,7 +173,7 @@ A. Containerization Software
 C. Type 2 Hypervisor
 D. Type 1 Hypervisor
 >> Explain: A Virtual Machine Manager (VMM), also known as a hypervisor, is the software/hardware combination that creates and manages the virtual environment.
->> Tag: Virtualization
+>> Tag: Virtual Environment
 ---
 A developer needs to style a webpage. Which option should they choose?
 *A. Tailwind CSS
@@ -181,7 +181,7 @@ B. ROM
 C. Chipset
 D. SpringBoard
 >> Explain: Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.
->> Tag: Web Development
+>> Tag: Customization
 ---
 What is a type of virus specifically designed to hide its presence on a system to avoid detection by antivirus software
 *A. stealth virus
@@ -189,14 +189,15 @@ B. boot sector virus
 C. trojan horse
 D. program virus
 >> Explain: A stealth virus is a hidden computer virus that attacks operating system processes and averts typical antivirus or antimalware scans.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 What is a communication mode where signals travel in one direction at a time
 A. Automatic
 *B. Half-Duplex
 C. Full Duplex
 D. Direct
->> Explain: In a half-duplex system, there are two directions but only one can be used at a time (like a walkie-talkie). >> Tag: Networking
+>> Explain: In a half-duplex system, there are two directions but only one can be used at a time (like a walkie-talkie). 
+>> Tag: Networking
 ---
 What programming language does Android OS use?
 A. Python
@@ -204,7 +205,7 @@ B. Html
 C. Sql
 *D. Java
 >> Explain: Historically and primarily, Java has been the main language for Android development, though Kotlin is now also widely used.
->> Tag: Programming
+>> Tag: Customization
 ---
 Which type of drive should you choose for a laptop if you want to be energy efficient?
 *A. SSD
@@ -244,7 +245,7 @@ B. Multipoint protection
 C. Extended Support
 D. Endpoint protection
 >> Explain: Unified Threat Management (UTM) is a single security solution, and typically a single security appliance, that provides several security functions at a single point on the network, including firewall capabilities.
->> Tag: Security
+>> Tag: Networking
 ---
 Which core functions are provided by all operating systems?
 A. User interface design, application development, software installation
@@ -260,7 +261,7 @@ B. After the user completes their session
 C. Only when the user accesses specific features
 *D. Immediately when the user is authenticated
 >> Explain: In the AAA framework, the "Accounting" part (logging activity) typically starts as soon as a user successfully authenticates to the system.
->> Tag: Security
+>> Tag: Networking
 ---
 Which cloud computing model suits a company needing IT help desks and other services?
 *A. Software as a Service (SaaS)
@@ -276,7 +277,7 @@ A. A utility software for file management tasks
 C. A software designed to manage hardware resources
 D. A system software for operating system maintenance
 >> Explain: An application program (software application, or app) is a computer program designed to carry out a specific task other than one relating to the operation of the computer itself.
->> Tag: Software
+>> Tag: Operating Systems
 ---
 Which device actively interacts with or affects its environment when detecting attacks?
 *A. Intrusion Prevention System (IPS)
@@ -284,7 +285,7 @@ B. Virtual Private Network (vpn)
 C. Domain Name System (dns)
 D. Network Management System (nms)
 >> Explain: Unlike an IDS which only detects/alerts, an IPS actively works to block or prevent the detected attack.
->> Tag: Security
+>> Tag: Networking
 ---
 What environment is designed specifically to run legacy software?
 A. Bus architecture
@@ -292,7 +293,7 @@ B. Virtual nic
 C. Riser card-based motherboard
 *D. Virtual sandbox
 >> Explain: A virtual sandbox or virtual machine can be configured with an older OS environment specifically to maintain compatibility with legacy software.
->> Tag: Virtualization
+>> Tag: Virtual Environment
 ---
 An application is configured to control a resource and allow three other computers to access it. Which network architecture should the application have?
 A. Virtual machine
@@ -332,7 +333,7 @@ A. Macro Virus
 C. Encrypted Virus
 D. Program Virus
 >> Explain: A boot sector virus is a type of virus that infects the master boot record (MBR) of executable files or the hard drive's boot sector.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 Which of the following is a runtime environment for executing JavaScript code outside a browser?
 A. Express.js
@@ -340,7 +341,7 @@ B. Bus Architecture
 *C. Node.js
 D. React.js
 >> Explain: Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.
->> Tag: Web Development
+>> Tag: Customization
 ---
 Which of the following would be used to interconnect 6 computers with speeds of 10GB?
 A. Full-Duplex
@@ -356,7 +357,7 @@ B. Visual Studio Code
 C. Xcode
 D. Eclipse
 >> Explain: While many IDEs support Java, IntelliJ IDEA is widely considered the premier IDE for Java development. (Note: Eclipse is also a valid answer, but IntelliJ is often the 'best' in modern context).
->> Tag: Programming
+>> Tag: IDEs and Text Editors
 ---
 What is an example of a system call used by the Windows API?
 A. Terminateprocess()
@@ -372,7 +373,7 @@ B. Modules
 C. Scripts
 *D. Algorithms
 >> Explain: Procedural programming is a programming paradigm, derived from structured programming, based on the concept of the procedure call. Algorithms are the step-by-step procedures used.
->> Tag: Programming
+>> Tag: Customization
 ---
 What stores data that will be used by the MAR?
 A. Instruction register (ir)
@@ -396,7 +397,7 @@ B. Boot Sector Virus
 *C. Computer Worm
 D. Spyware
 >> Explain: A computer worm is a standalone malware computer program that replicates itself in order to spread to other computers. Unlike a virus, it does not need to attach itself to an existing program.
->> Tag: Security
+>> Tag: Networking
 ---
 We need a way to download 10GB per second. Which cable should we use?
 A. Twisted pair cable
@@ -412,7 +413,7 @@ B. Watchpoint
 C. Half-Duplex
 *D. Breakpoint
 >> Explain: In software development, a breakpoint is an intentional stopping or pausing place in a program, put in place for debugging purposes.
->> Tag: Programming
+>> Tag: IDEs and Text Editors
 ---
 A developer wants to create a single static website. Which language should they use?
 A. XML
@@ -420,7 +421,7 @@ B. JAVA
 *C. HTML
 D. PHP
 >> Explain: HTML is the standard markup language for documents designed to be displayed in a web browser. It is the primary language for static websites.
->> Tag: Web Development
+>> Tag: Customization
 ---
 An organization has a number of employees who are familiar with working and configuring Apache servers.
 A. Chipset
@@ -428,7 +429,7 @@ B. Vps
 *C. LAMP stack
 D. SpringBoard
 >> Explain: The LAMP stack (Linux, Apache, MySQL, PHP) is the ideal choice for teams already familiar with Apache servers.
->> Tag: Tech Stacks
+>> Tag: Customization
 ---
 Which motherboard component is a signal pathway and allows the CPU to communicate with other devices?
 *A. Bus architecture
@@ -460,7 +461,7 @@ B. A virus that infects hardware firmware and BIOS
 C. A virus that spreads through network hardware devices
 *D. A virus that disguises itself as a legitimate program by using a similar file name and a different file extension.
 >> Explain: A companion virus is an older computer virus type that, unlike traditional viruses, does not modify any files. Instead, it creates a new file with the same name but a different extension (like .com instead of .exe).
->> Tag: Security
+>> Tag: Operating Systems
 ---
 What is a communication channels carries signals simultaneously?
 A. Half-simplex
@@ -476,7 +477,7 @@ B. Angular.js
 C. Node.js
 D. Bobcat.js
 >> Explain: React.js (and specifically React Native) is a popular framework used to build applications that can run across multiple platforms (web, iOS, Android).
->> Tag: Web Development
+>> Tag: Customization
 ---
 What are example(s) of a Text Editor
 *A. Visual Studio Code, Notepad++, Atom, and Sublime Text
@@ -484,7 +485,7 @@ B. Adobe Photoshop, Microsoft Word, OpenOffice Writer
 C. AutoCAD, CorelDraw, Adobe Illustrator
 D. Microsoft Excel, Google Sheets, LibreOffice Calc
 >> Explain: Text editors are used for writing plain text and code. VS Code and Notepad++ are classic examples.
->> Tag: Tools
+>> Tag: IDEs and Text Editors
 ---
 Which memory is etched onto a silicon chip?
 *A. ROM
@@ -508,7 +509,7 @@ B. Django
 C. TCP
 D. Cassandra
 >> Explain: Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines and streaming analytics. 
->> Tag: Programming
+>> Tag: Cloud Computing
 ---
 What is cloud computing service availability measured in?
 *A. Nines
@@ -556,7 +557,7 @@ A. Something you know
 C. Something you like
 D. Something you can do
 >> Explain: "Something you do" (behavioral biometrics) can involve patterns like typing speed or gait, which can vary and provide different data points for authentication.
->> Tag: Security
+>> Tag: Operating Systems
 ---
 What is the operating system life cycle stage in which critical security updates will be supported?
 A. Programming-Language Support
@@ -580,7 +581,7 @@ A. Adobe Photoshop, Final Cut Pro, AutoCAD
 C. Microsoft Office, CorelDraw, Premiere Pro
 D. Notepad++, Sublime Text, Atom
 >> Explain: Integrated Development Environments (IDEs) provide comprehensive facilities to computer programmers for software development.
->> Tag: Programming
+>> Tag: IDEs and Text Editors
 ---
 Which requirement would a physical machine need to have replicated by the hypervisor?
 A. ROM
@@ -588,7 +589,7 @@ A. ROM
 C. Runtime
 D. Modules
 >> Explain: For a virtual machine to run, the hypervisor often must emulate the physical hardware (CPU, NIC, etc.) so the guest OS can interact with it.
->> Tag: Virtualization
+>> Tag: Virtual Environment
 ---
 What is the function of an operating system?
 *A. It acts as an intermediary between computer users and computer resources.
@@ -6521,7 +6522,7 @@ B. Blu-ray media
 C. Mountable ISO images
 *D. CD/DVD drive
 >> Explain: For a single, "one-off" installation where network infrastructure isn't set up, using physical optical media like a CD or DVD remains a traditional and straightforward preferred method.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Why is the use of optical media becoming less popular?
 A. Limited availability of compatible drives
@@ -6529,7 +6530,7 @@ B. Slow installation speed
 *C. Applications outgrowing its capacity
 D. Incompatibility with virtualization products
 >> Explain: Modern software suites and operating systems often exceed the 4.7GB capacity of a standard DVD, making optical media impractical compared to digital downloads or USB drives.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 What is the advantage of using mountable ISO images for installation?
 *A. Compatibility with virtualization products
@@ -6537,7 +6538,7 @@ B. Faster installation process
 C. Smaller file size
 D. Availability of larger capacity options
 >> Explain: Virtualization platforms (like VMware or Hyper-V) allow you to "mount" an ISO file directly to a virtual machine, treating it as a physical disc, which simplifies the setup process significantly.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Why have USB drives become popular for application installations?
 A. Prevention of overwriting and repurposing
@@ -6545,7 +6546,7 @@ A. Prevention of overwriting and repurposing
 C. Simultaneous installations on multiple computers
 D. Compatibility with virtualization products
 >> Explain: USB drives offer much higher data transfer speeds and significantly larger storage capacities (up to several terabytes) compared to CDs or DVDs.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Why do some application vendors lock their USB drives?
 A. To ensure compatibility with virtualization products
@@ -6553,7 +6554,7 @@ A. To ensure compatibility with virtualization products
 C. To reduce the cost of USB drives
 D. To increase installation speed
 >> Explain: Vendors often set USB installation media to "read-only" to protect the installation files from being deleted or corrupted by the user or malware.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 What is the advantage of a network installation for deploying applications on multiple PCs simultaneously?
 A. It allows the user to choose the installation location.
@@ -6561,7 +6562,7 @@ A. It allows the user to choose the installation location.
 C. It ensures reporting services for installation status.
 D. It provides elevated privileges for the user.
 >> Explain: Network installations can be simple "pull" operations from a shared folder, which allows deployment across multiple machines without needing complex management software or agents.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Which type of installation method requires the user to answer specific questions during the installation?
 A. Automated installation
@@ -6569,7 +6570,7 @@ A. Automated installation
 C. Pull installation
 D. Push installation
 >> Explain: A user-initiated installation is the traditional "manual" method where a person clicks through a setup wizard and selects options like installation path and features.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Which tool is considered the Swiss Army knife of installation and reporting services?
 A. Microsoft Endpoint Configuration Manager (MECM)
@@ -6577,7 +6578,7 @@ B. Microsoft Active Directory (AD)
 *C. Microsoft System Center Configuration Manager (SCCM)
 D. Group Policy
 >> Explain: SCCM is widely known in the IT industry as the "Swiss Army knife" because of its comprehensive ability to handle deployment, inventory, patching, and detailed reporting in one package.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 What is the primary difference between push-based and pull-based installations?
 A. Push-based installations require minimal infrastructure.
@@ -6585,7 +6586,7 @@ A. Push-based installations require minimal infrastructure.
 C. Push-based installations require an agent for reporting on the current operating system.
 D. Pull-based installations provide reporting services.
 >> Explain: In a pull-based model, the client computer requests the software from a server at its own convenience. In a push-based model, the server forces the installation onto the client.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 What privilege level is typically required for user-initiated installations?
 *A. Minimal privileges
@@ -6593,7 +6594,7 @@ B. Elevated privileges
 C. Administrator privileges
 D. System account privileges
 >> Explain: Many modern user-initiated installations (like those from an app store or per-user installs) are designed to run with minimal privileges to improve security and ease of use for standard users.
->> Tag: Software Installation
+>> Tag: Customization
 ---
 Which component of a hard disk drive system controls how the drive operates and encodes data?
 A. Hard Disk
