@@ -4,7 +4,8 @@ A. SaaS (Software As A Service)
 B. Workstation Operating System
 *C. NoSQL Document Databases
 D. Relational Database Management System
->> Explain: MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. >> Tag: Databases
+>> Explain: MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. 
+>> Tag: Databases
 ---
 Which of the following is an example of an interpreted language?
 *A. Python
@@ -19,7 +20,8 @@ A. Silicon chip
 *B. Southbridge chip
 C. Bios chip
 D. Northbridge chip
->> Explain: The Southbridge is an IC on the motherboard responsible for the hard drive controller, I/O ports, and integrated hardware such as audio and USB. >> Tag: Hardware
+>> Explain: The Southbridge is an IC on the motherboard responsible for the hard drive controller, I/O ports, and integrated hardware such as audio and USB. 
+>> Tag: Hardware
 ---
 Malware that encrypts files and changes their extensions to prevent access until a ransom is paid.
 A. Trojan
@@ -42,7 +44,8 @@ A. Managing small databases
 *B. Processing and analyzing large datasets
 C. Creating software applications
 D. Designing web interfaces
->> Explain: Apache Hadoop is a collection of open-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation. >> Tag: Big Data
+>> Explain: Apache Hadoop is a collection of open-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation. 
+>> Tag: Programming
 ---
 iPads need to be connected in a warehouse. Which one should they use?
 *A. Wifi
@@ -57,7 +60,8 @@ A. Database
 B. Mini-ITX
 C. VPN
 *D. Hypervisor
->> Explain: A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. >> Tag: Virtualization
+>> Explain: A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines. 
+>> Tag: Virtualization
 ---
 Which type of malicious software records every keystroke made on a computer to capture sensitive information, such as passwords and credit card details
 A. Trojan
@@ -88,7 +92,8 @@ A. Read-only memory (rom)
 B. Ram (random Access memory)
 *C. Central Processing Unit (CPU)
 D. Arithmetic Logic Unit (alu)
->> Explain: The CPU is often referred to as the "brain" of the computer and is one of the three primary components (CPU, Memory, I/O) required for a computer to function. >> Tag: Hardware
+>> Explain: The CPU is often referred to as the "brain" of the computer and is one of the three primary components (CPU, Memory, I/O) required for a computer to function. 
+>> Tag: Hardware
 ---
 What is a type of malicious software that can change its code or appearance each time it infects a system, spreads, or is executed
 A. trojan horse
@@ -111,7 +116,8 @@ Which type of memory module is used in laptops and other small devices?
 B. DIMM
 C. NVDIMM
 D. CRIMM
->> Explain: SODIMM (Small Outline Dual In-line Memory Module) is a type of computer memory built using integrated circuits. SODIMMs are a smaller alternative to a DIMM, being roughly half the size. >> Tag: Hardware
+>> Explain: SODIMM (Small Outline Dual In-line Memory Module) is a type of computer memory built using integrated circuits. SODIMMs are a smaller alternative to a DIMM, being roughly half the size. 
+>> Tag: Hardware
 ---
 What defines ground rules used by channel signals and messages within a network?
 *A. Protocol
@@ -150,7 +156,8 @@ A. Memory Buffer Register
 B. Instruction Buffer Register
 C. Instruction Register
 *D. Memory Address Register
->> Explain: The Memory Address Register (MAR) is a CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored. >> Tag: Hardware
+>> Explain: The Memory Address Register (MAR) is a CPU register that either stores the memory address from which data will be fetched to the CPU, or the address to which data will be sent and stored. 
+>> Tag: Hardware
 ---
 A user needs a plug-and-play device to transfer large files from a work computer to a personal computer at home. Which option is best?
 A. Internal sata hard drive 2
@@ -212,7 +219,8 @@ A. MBR
 B. NLX
 C. .ZIP
 *D. ATX
->> Explain: ATX (Advanced Technology eXtended) motherboards are full-sized and typically provide several full-size expansion slots for GPUs, sound cards, etc. >> Tag: Hardware
+>> Explain: ATX (Advanced Technology eXtended) motherboards are full-sized and typically provide several full-size expansion slots for GPUs, sound cards, etc. 
+>> Tag: Hardware
 ---
 What is a category of a system service that provides compilers, debuggers, and interpreters for common programming languages?
 *A. Programming-Language Support
@@ -243,7 +251,8 @@ A. User interface design, application development, software installation
 B. Network configuration, database management, security auditing
 *C. Device management, file management, memory management, process management
 D. Graphics processing, audio management, internet browsing
->> Explain: These four (Device, File, Memory, and Process management) are the fundamental roles of any operating system kernel. >> Tag: Operating Systems
+>> Explain: These four (Device, File, Memory, and Process management) are the fundamental roles of any operating system kernel. 
+>> Tag: Operating Systems
 ---
 At what point does user activity begin being logged in the Authentication, Authorization, and Accounting framework?
 A. Once the user is authorized for administrative tasks
@@ -258,7 +267,8 @@ Which cloud computing model suits a company needing IT help desks and other serv
 B. Platform as a Service (PaaS)
 C. Infrastructure as a Service (IaaS)
 D. Data as a Service (DaaS)
->> Explain: SaaS provides a complete software solution that you purchase on a pay-as-you-go basis from a cloud service provider, which can include help desk management systems. >> Tag: Cloud Computing
+>> Explain: SaaS provides a complete software solution that you purchase on a pay-as-you-go basis from a cloud service provider, which can include help desk management systems. 
+>> Tag: Cloud Computing
 ---
 What is a program application?
 A. A utility software for file management tasks
@@ -305,7 +315,8 @@ A. RAID 10 mirrors data on a single drive for data protection only.
 B. RAID 10 focuses on data redundancy without performance benefits.
 C. RAID 10 stripes data across drives for maximum storage capacity.
 *D. RAID 10 provides high read and write performance by striping data across mirrored pairs of drives. (RAID 1 + RAID 0)
->> Explain: RAID 10 combines the redundancy of mirroring (RAID 1) with the performance of striping (RAID 0). >> Tag: Hardware
+>> Explain: RAID 10 combines the redundancy of mirroring (RAID 1) with the performance of striping (RAID 0). 
+>> Tag: Hardware
 ---
 What is the most affordable way to store 16TB of data?
 *A. HDD
@@ -392,7 +403,8 @@ A. Twisted pair cable
 B. Coaxial cable
 *C. Fiber optic cable
 D. Copper wire
->> Explain: Fiber optic cables provide the highest bandwidth and are the standard for high-speed data transmission at 10Gbps and beyond. >> Tag: Networking
+>> Explain: Fiber optic cables provide the highest bandwidth and are the standard for high-speed data transmission at 10Gbps and beyond. 
+>> Tag: Networking
 ---
 What is a debugging tool that allows the stopping of program execution?
 A. Set Point
@@ -423,7 +435,8 @@ Which motherboard component is a signal pathway and allows the CPU to communicat
 B. Partial mesh architecture
 C. Star architecture
 D. Full mesh architecture
->> Explain: A bus is a communication system that transfers data between components inside a computer, or between computers. >> Tag: Hardware
+>> Explain: A bus is a communication system that transfers data between components inside a computer, or between computers. 
+>> Tag: Hardware
 ---
 Which motherboard has a GPU mounted at a right angle next to the expansion slot?
 A. Full-Duplex
@@ -494,7 +507,8 @@ An organization wants to support high-volume live data streams. Which technology
 B. Django
 C. TCP
 D. Cassandra
->> Explain: Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines and streaming analytics. >> Tag: Big Data
+>> Explain: Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines and streaming analytics. 
+>> Tag: Programming
 ---
 What is cloud computing service availability measured in?
 *A. Nines
@@ -549,7 +563,8 @@ A. Programming-Language Support
 B. Data Movement Instructions
 *C. Extended Support
 D. Mainstream Support
->> Explain: During the Extended Support phase, vendors typically stop adding new features but continue to provide critical security patches. >> Tag: Operating Systems
+>> Explain: During the Extended Support phase, vendors typically stop adding new features but continue to provide critical security patches. 
+>> Tag: Operating Systems
 ---
 What is the secondary memory of a computer
 A. CPU
@@ -565,7 +580,7 @@ A. Adobe Photoshop, Final Cut Pro, AutoCAD
 C. Microsoft Office, CorelDraw, Premiere Pro
 D. Notepad++, Sublime Text, Atom
 >> Explain: Integrated Development Environments (IDEs) provide comprehensive facilities to computer programmers for software development.
->> Tag: Tools
+>> Tag: Programming
 ---
 Which requirement would a physical machine need to have replicated by the hypervisor?
 A. ROM
