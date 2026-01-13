@@ -1,4 +1,484 @@
 const rawQuizData = `
+What is used by the operating system to hold its system code and other programs?
+A. Central processing unit (CPU)
+*B. Random access memory (RAM)
+C. Graphics processing unit (GPU)
+D. Solid-state drive (SSD)
+>> Explain: RAM is the primary volatile memory used by the computer to hold the operating system kernel and active applications for quick access by the CPU.
+>> Tag: Hardware
+---
+What is an example of a server operating system?
+*A. Red Hat Enterprise Linux
+B. Windows 11
+C. Symbian OS 
+D. Microsoft Azure
+>> Explain: Red Hat Enterprise Linux (RHEL) is a widely used open-source operating system designed specifically for server environments. Windows 11 is a client OS, Symbian is for mobile devices, and Azure is a cloud platform.
+>> Tag: Operating Systems
+---
+What is a fundamental building block of an operating system that keeps track of each process in memory, including whether to run it or wait for some event?
+A. Memory management
+*B. Process control management
+C. Scheduling and dispatch
+D. Secondary storage management
+>> Explain: Process control management (often via a Process Control Block) is responsible for tracking the status of processes, such as running, waiting, or ready states.
+>> Tag: Operating Systems
+---
+What would be an advantage of the graphical user interface (GUI) feature when compared with other interfaces in an operating system?
+A. It allows for different commands to be used with different shells.
+B. It is more efficient and provides faster access to services that need to be performed.
+*C. It provides greater ease of use. 
+D. It provides greater precision.
+>> Explain: GUIs use visual elements like icons and windows, making the system more intuitive and easier to learn for users compared to command-line interfaces.
+>> Tag: Operating Systems
+---
+What is an example of a system call used by the POSIX API for POSIX-based systems running UNIX, Linux, and macOS?
+A. CreateProcess ()
+B. CreateFile()
+*C. Read ()
+D. TerminateProcess( )
+>> Explain: The read() function is a standard system call in the POSIX API used to read data from a file descriptor. The other options are specific to the Windows API.
+>> Tag: Operating Systems
+---
+Which part of a hard disk drive is responsible for storing actual data?
+A. Tracks
+*B. Platters
+C. Sectors
+D. Read/write heads
+>> Explain: The platters are the circular magnetic disks inside the hard drive where the data is physically recorded.
+>> Tag: Hardware
+---
+What is an advantage of solid-state drives (SSD) when compared to hard disk drives (HDD)?
+A. Lower cost per byte
+B. Higher storage capacity by price
+C. Unlimited write operations
+*D. Faster data transfer
+>> Explain: SSDs use flash memory and have no moving parts, allowing for significantly faster data access and transfer speeds compared to mechanical HDDs.
+>> Tag: Hardware
+---
+What does an IT professional use NVM scheduling for?
+A. To improve the performance of the system
+B. To enhance the security of the system
+*C. To manage the allocation of nonvolatile memory
+D. To improve the compatibility of the system
+>> Explain: NVM scheduling involves managing input/output operations specifically for Non-Volatile Memory (like SSDs) to optimize performance and lifespan.
+>> Tag: Hardware
+---
+A laptop user notices that their plugged-in device is overheating and shutting down unexpectedly. What is the most likely solution to this hardware problem?
+A. Replace the battery
+*B. Clean the cooling vents and fan
+C. Upgrade the RAM
+D. Reinstall the operating system
+>> Explain: Overheating in laptops is frequently caused by dust accumulation blocking airflow in the vents and fans. Cleaning them restores proper cooling.
+>> Tag: Hardware
+---
+What is the primary function of the file system interface? 
+A. To manage security for the operating system and storage devices
+*B. To allow the system to access and manage files
+C. To eliminate the need for file permissions and ownership
+D. To create a read-only connection between the operating system and storage
+>> Explain: The file system interface provides the structure and methods for the operating system and users to store, retrieve, and organize files on storage devices.
+>> Tag: Operating Systems
+---
+Which feature allows a single physical processor to perform as two processors at the same time?
+A. CMOS (complementary metal oxide semiconductor)
+B. PCI (peripheral component interconnect)
+C. HDD (hard disk drive)
+*D. HTT (hyper-threading technology)
+>> Explain: Hyper-Threading Technology (HTT) enables a single physical CPU core to appear as two logical processors to the operating system, improving multitasking performance.
+>> Tag: Hardware
+---
+Which type of memory does not change during the life span of a computer?
+A. Dynamic RAM
+B. Static RAM
+*C. Read-only memory (ROM)
+D. Cache memory
+>> Explain: ROM (Read-Only Memory) contains firmware instructions that are permanently written during manufacturing and typically do not change during normal operation.
+>> Tag: Hardware
+---
+Which cache memory is the smallest but fastest?
+*A. L1
+B. L2
+C. L3
+D. HDD
+>> Explain: Level 1 (L1) cache is built directly into the processor core and offers the fastest access speeds, though it has the smallest capacity.
+>> Tag: Hardware
+---
+Which memory type is stored on a drive and is referred to as a paging file?
+A. L1
+B. L2
+C. L3
+*D. Virtual RAM
+>> Explain: Virtual RAM (or virtual memory) uses a portion of the hard drive (the paging file) to simulate additional RAM when physical memory is full.
+>> Tag: Hardware
+---
+Which memory type is characterized by its independence from the CPU's external clock?
+A. DRAM
+B. Synchronous DRAM
+*C. Asynchronous DRAM
+D. DDR SDRAM
+>> Explain: Asynchronous DRAM is an older type of memory that does not synchronize its operation with the system clock, unlike modern SDRAM.
+>> Tag: Hardware
+---
+Which memory type shares a common clock signal with the computer’s system-bus clock?
+A. DRAM
+*B. Synchronous DRAM
+C. Asynchronous DRAM
+D. DDR SDRAM
+>> Explain: Synchronous DRAM (SDRAM) synchronizes data transfer with the system bus clock to improve efficiency and speed.
+>> Tag: Hardware
+---
+Which cloud feature enables various clients and devices to access resources?
+A. Virtualization
+*B. Resource pooling
+C. On-demand self-service
+D. Rapid elasticity
+>> Explain: In the context of this quiz, Resource Pooling is identified as the feature enabling access (though typically "Broad Network Access" is the standard NIST definition for device access, Resource Pooling allows serving multiple clients).
+>> Tag: Cloud Computing
+---
+Which virtual machine tool involves testing out an application where files are not saved to the drive or memory and never affect the physical machine?
+*A. Virtual sandbox
+B. Test development
+C. Application virtualization
+D. Cross-platform virtualization
+>> Explain: A virtual sandbox creates an isolated environment where code can be executed safely; any changes are discarded when the sandbox is closed, protecting the host system.
+>> Tag: Virtual Environment
+---
+Which virtual machine tool enables applications designed for one type of hardware to run on a different hardware type?
+A. Virtual sandbox
+B. Test development
+C. Application virtualization
+*D. Cross-platform virtualization
+>> Explain: Cross-platform virtualization (or emulation) allows software compiled for one CPU architecture to run on a completely different architecture.
+>> Tag: Virtual Environment
+---
+Which cloud feature allows organizations to track usage and bill accordingly?
+A. Broad network access
+*B. Measured service
+C. On-demand self-service
+D. Rapid elasticity
+>> Explain: Measured service automatically controls and optimizes resource use by metering capability (e.g., storage, processing, bandwidth), providing transparency for billing.
+>> Tag: Cloud Computing
+---
+A user is working on a critical mission project and needs to access a system and network during peak and off-peak hours. Which non-functional requirement (NFR) addresses the likelihood the system will be accessible to the user at a specified time within an organization’s network?
+*A. Availability
+B. Reliability
+C. Usability
+D. Scalability
+>> Explain: Availability is the percentage of time a system is operational and accessible to users when needed.
+>> Tag: Non-functional Requirements
+---
+Which automatic configuration process occurs when a Windows-based dynamic host configuration protocol (DHCP) client is unable to reach a DHCP server?
+*A. Automatic private IP addressing (APIPA)
+B. Static IP configuration
+C. Dynamic host configuration protocol (DHCP) relay
+D. Remote access service (RAS)
+>> Explain: If a DHCP server is unreachable, Windows automatically assigns an APIPA address in the range 169.254.x.x to allow local connectivity.
+>> Tag: Networking
+---
+Which Windows tool is referred to as a centralized authentication server?
+*A. Domain Controller
+B. Directory Utility
+C. Samba
+D. Apache Directory
+>> Explain: A Domain Controller is a server that responds to security authentication requests within a Windows domain (using Active Directory).
+>> Tag: Operating Systems
+---
+Which device offers passive protection against attacks on network- and cloud-based resources?
+A. Intrusion prevention system (IPS)
+*B. Intrusion detection system (IDS)
+C. Unified threat management (UTM)
+D. Remote access service (RAS)
+>> Explain: An Intrusion Detection System (IDS) monitors network traffic for suspicious activity and alerts administrators (passive), unlike an IPS which actively blocks traffic.
+>> Tag: Networking
+---
+Which networking solution helps to distribute the traffic across multiple servers capable of fulfilling the same tasks?
+*A. Load balancing
+B. Web hosting
+C. Spam blocking
+D. Centralized computing
+>> Explain: Load balancing distributes incoming network traffic across a group of backend servers to ensure no single server becomes overwhelmed.
+>> Tag: Networking
+---
+Which category of internet- and cloud-based services addresses a company’s potential need for things like Voice over Internet Protocol (VoIP), instant messaging, and video collaboration?
+A. Data as a service (DaaS)
+B. Business processes as a service (BpaaS)
+C. Hardware as a service (HaaS)
+*D. Communications as a service (CaaS)
+>> Explain: CaaS is a cloud service model that provides communication and collaboration tools (VoIP, IM, Video) over the internet.
+>> Tag: Cloud Computing
+---
+A developer needs an environment that supports built-in debugging, syntax highlighting, and code execution for writing and testing Python scripts. Which tool should the developer use?
+*A. Visual Studio Code
+B. Notepad
+C. Atom
+D. Brackets
+>> Explain: Visual Studio Code is a popular code editor that supports debugging, syntax highlighting, and execution, making it ideal for development. Notepad is a simple text editor lacking these features.
+>> Tag: IDEs and Text Editors
+---
+Which type of programming language is compiled?
+A. Scripting
+B. Python
+*C. Java and C/C++
+D. Assembly language
+>> Explain: C and C++ are traditional compiled languages. Java is also compiled (to bytecode). Scripting languages like Python are typically interpreted.
+>> Tag: Customization
+---
+A developer is seeking a customizable text editor that supports a wide wide range of programming languages. Which text editor should the developer use?
+A. Atom
+*B. Eclipse
+C. BlueJ
+D. Dreamweaver
+>> Explain: While Eclipse is often classified as an IDE, in this context it is the correct answer for a tool supporting a wide range of languages. (Note: Atom is also a valid text editor, but Eclipse is the keyed answer).
+>> Tag: IDEs and Text Editors
+---
+Which scripting or programming language is considered to be an object-oriented programming language?
+*A. C++
+B. Structured Query Language (SQL)
+C. Hypertext Markup Language
+D. C language
+>> Explain: C++ is a powerful general-purpose programming language that supports object-oriented programming features like classes and inheritance.
+>> Tag: Customization
+---
+Which scripting or programming tool makes use of cmdlet (Command let) that performs a specific function?
+A. JavaScript
+*B. PowerShell
+C. Hypertext Markup Language
+D. Windows Batch Scripts
+>> Explain: Cmdlets are specialized commands used in the Windows PowerShell environment to perform specific system administration functions.
+>> Tag: Customization
+---
+Which type of network topology is cheap and easy to install but difficult to reconfigure?
+*A. Bus
+B. Star
+C. Ring
+D. Mesh
+>> Explain: A bus topology uses a single central cable. It is cheap to install but if the main cable fails, the whole network goes down, and it is difficult to troubleshoot or reconfigure.
+>> Tag: Networking
+---
+Which type of network hardware works at layer 2 and provides centralized connectivity?
+A. Patch panels
+B. Hubs
+*C. Switches
+D. Routers
+>> Explain: Switches operate at the Data Link Layer (Layer 2) and use MAC addresses to forward data to the correct device, providing centralized connectivity.
+>> Tag: Networking
+---
+Which type of twisted pair cable can transmit data at speeds up to 10 Mbps?
+A. Category 1
+B. Category 2
+*C. Category 3
+D. Category 4
+>> Explain: Category 3 (Cat 3) cable was the standard for 10BASE-T Ethernet networks, capable of transmitting data at 10 Mbps.
+>> Tag: Networking
+---
+Which topology provides multiple pathways between end nodes?
+A. Ring
+B. Bus
+C. Star
+*D. Mesh
+>> Explain: In a mesh topology, devices are interconnected, often with multiple links to different nodes, providing redundancy and multiple pathways for data.
+>> Tag: Networking
+---
+Which type of network connects computers and other networking devices in a single large building?
+A. Wide area network (WAN)
+*B. Local area network (LAN)
+C. Metropolitan area network (MAN)
+D. Personal area network (PAN)
+>> Explain: A Local Area Network (LAN) connects devices within a limited geographic area, such as a home, school, or office building.
+>> Tag: Networking
+---
+Which type of virus intends to make itself difficult to detect or analyze?
+*A. Armored virus
+B. Boot sector virus
+C. Companion virus
+D. Macro virus
+>> Explain: An armored virus uses various techniques to protect itself from being analyzed or debugged by antivirus researchers.
+>> Tag: Operating Systems
+---
+Which type of virus exploits those applications that make use of a mini-basic programming language?
+A. Armored virus
+B. Boot sector virus
+C. Companion virus
+*D. Macro virus
+>> Explain: Macro viruses infect documents and spreadsheets by exploiting the macro scripting languages (like VBA) built into applications like Microsoft Office.
+>> Tag: Operating Systems
+---
+Which type of virus changes form to avoid detection?
+A. Multipartite virus
+B. Phage virus
+*C. Polymorphic virus
+D. Macro virus
+>> Explain: A polymorphic virus changes its own code (signature) every time it replicates, making it difficult for antivirus software to detect it using standard signature matching.
+>> Tag: Operating Systems
+---
+Which type of attack involves attempting to acquire information about a network and system through personal interactions?
+A. Antivirus engine
+B. Botnet
+*C. Social engineering
+D. Threat agent
+>> Explain: Social engineering relies on manipulating individuals into divulging confidential information rather than hacking software vulnerabilities directly.
+>> Tag: Networking
+---
+A video production company needs massive storage but wants to minimize energy usage. Which network-attached storage (NAS) configuration will meet the goal?
+*A. Installing lower rotational speed disks
+B. Filling every drive bay in the NAS
+C. Installing additional fans in the NAS
+D. Placing the NAS near the other computers
+>> Explain: Hard drives with lower rotational speeds (e.g., 5400 RPM) consume less power and generate less heat than high-speed drives (7200+ RPM).
+>> Tag: Hardware
+---
+The marketing department needs a central storage solution that automatically scales with their increasing storage needs. Which storage solution would meet their requirement?
+*A. Network-attached storage (NAS)
+B. External hard disk drive (HDD)
+C. Internal solid-state hybrid drive (SSHD)
+D. Universal serial bus (USB) flash
+>> Explain: A NAS provides a centralized storage location accessible over the network that can easily be scaled by adding more drives or expanding storage pools.
+>> Tag: Hardware
+---
+A user runs two different applications that need 4GB of random access memory (RAM) each. The operating system (OS) also needs 4GB. What is the minimum amount of RAM the user’s computer should have?
+A. 4GB
+B. 8GB
+*C. 12GB
+D. 16GB
+>> Explain: The total requirement is the sum of all components: 4GB (App 1) + 4GB (App 2) + 4GB (OS) = 12GB.
+>> Tag: Hardware
+---
+A computer scientist has a computer with 32GB of random access memory (RAM), with the OS requiring 2GB. They want to run multiple instances of a classification algorithm that use 7GB of RAM each. What is the maximum number of instances that can be run on the computer?
+A. 3
+*B. 4
+C. 5
+D. 6
+>> Explain: Available RAM = 32GB - 2GB (OS) = 30GB. Each instance needs 7GB. 30 / 7 = 4.28. Therefore, 4 full instances can run.
+>> Tag: Hardware
+---
+An application is being configured to only make requests to a database on another computer. Which role will the application play in this scenario?
+*A. Client
+B. Server
+C. Peer
+D. Owner
+>> Explain: In a network architecture, the system making a request for a service or resource is the "Client," while the system fulfilling the request is the "Server."
+>> Tag: Networking
+---
+A printer is being configured on a network to print documents for users. Which role should the printer be configured for?
+*A. Server
+B. Client
+C. Peer
+D. Requestor
+>> Explain: A network printer (or print server) acts as a server because it accepts requests (print jobs) from client computers and processes them.
+>> Tag: Networking
+---
+A computer support technician is deploying a workstation that will be used for editing spreadsheets and web browsing. Which network role should the computer be configured for?
+*A. Client
+B. Server
+C. Router
+D. Peer
+>> Explain: The workstation is consuming services (accessing websites, opening files) rather than providing them, so it acts as a client.
+>> Tag: Networking
+---
+A hiring manager is interviewing a candidate to be part of a front-end development team. Which skill would be relevant to their job function?
+A. Java
+B. Python
+C. MySQL
+*D. TypeScript
+>> Explain: TypeScript is a superset of JavaScript commonly used in modern front-end web development frameworks like Angular and React.
+>> Tag: IDEs and Text Editors
+---
+Which back-end database management system could an IT company use in cloud-based solutions for its customers?
+*A. Mongo
+B. Hypertext Preprocessor (PHP)
+C. Node
+D. JavaScript Object Notation (JSON)
+>> Explain: MongoDB (Mongo) is a popular NoSQL database management system used in back-end stacks. PHP and Node are runtimes/languages, and JSON is a data format.
+>> Tag: Cloud Computing
+---
+Which tool would be appropriate for an organization handling document-based data?
+A. Couch Database (CouchDB)
+*B. Mongo Database (MongoDB)
+C. My Structured Query Language (MySQL)
+D. Structured Query Language (SQL) Server
+>> Explain: MongoDB is a document-oriented NoSQL database, making it ideal for handling document-based data structures.
+>> Tag: Cloud Computing
+---
+A project team’s requirements often evolve during the development process, and they need to modify the project as it progresses. Why would this team choose to use a tech stack in this scenario?
+A. Reliability
+B. Support
+*C. Flexibility
+D. Scalability
+>> Explain: A flexible tech stack allows developers to easily adapt to changing requirements and modify the application without major overhauls.
+>> Tag: IDEs and Text Editors
+---
+An IT manager is implementing a simple web server for a small-business customer. Which basic tool should the manager implement for this customer?
+A. Django
+B. PHP
+C. Ruby on Rails
+*D. Apache
+>> Explain: Apache HTTP Server is the actual web server software that serves the web pages. The other options are web frameworks or languages.
+>> Tag: Networking
+---
+An IT tech has been tasked with identifying a front-end framework that the IT team may adopt. Which framework fits the team’s needs?
+A. Spring
+B. Django
+*C. Angular
+D. Node
+>> Explain: Angular is a widely used front-end web application framework. Spring and Django are back-end frameworks, and Node is a runtime environment.
+>> Tag: IDEs and Text Editors
+---
+A new project has pre-existing code, libraries, and frameworks already integrated. Why would a network administer choose to utilize a tech stack when building this project?
+A. Flexibility
+*B. Efficiency
+C. Scalability
+D. Performance
+>> Explain: Using a tech stack with pre-existing components allows for greater efficiency as developers do not need to reinvent the wheel for standard functions.
+>> Tag: IDEs and Text Editors
+---
+Which layer does a type 2 hypervisor operate on in a virtual environment?
+*A. Host operating system
+B. Physical hardware
+C. Guest operating system
+D. Virtual application
+>> Explain: Type 2 hypervisors (hosted hypervisors) run as a software application on top of a host operating system.
+>> Tag: Virtual Environment
+---
+Which cloud computing characteristic provides a company with the ability to automatically scale down processing resources as needed?
+*A. Elasticity
+B. Ubiquitous access
+C. Measured service
+D. High availability
+>> Explain: Elasticity refers to the ability of the cloud environment to automatically expand (scale up) or contract (scale down) resources based on current demand.
+>> Tag: Cloud Computing
+---
+Which type of isolation do all virtualized containers employ?
+*A. Process
+B. Machine
+C. System library
+D. Host operating system
+>> Explain: Containers share the host OS kernel and isolate applications at the process level (user space), unlike VMs which provide machine-level isolation.
+>> Tag: Virtual Environment
+---
+What is a characteristic of virtualized containers?
+*A. Containers share the same host operating system.
+B. Containers have machine-level isolation.
+C. Containers require dedicated virtual processors.
+D. Containers may not access network resources.
+>> Explain: A key feature of containers is that they are lightweight because they share the underlying host operating system kernel.
+>> Tag: Virtual Environment
+---
+Which solution provides a user with an isolated computing environment for testing software?
+*A. Configuring a virtual machine for the user
+B. Setting up cloud-based storage for the user
+C. Helping the user create a virtualized container
+D. Adding more memory to the user’s computer
+>> Explain: A virtual machine provides a completely isolated environment (sandbox) where software can be tested without any risk to the host system.
+>> Tag: Virtual Environment
+---
+Which type of cloud service is exemplified by a vendor-managed cloud application that allows users to edit pictures?
+*A. Software as a Service (SaaS)
+B. Infrastructure as a Service (IaaS)
+C. Platform as a Service (PaaS)
+D. Hardware as a Service (HaaS)
+>> Explain: SaaS delivers a complete software application (like a photo editor) over the internet, managed entirely by the vendor.
+>> Tag: Cloud Computing
+---
 An organization chooses to use MongoDB. MongoDB is best described as which type of database?
 A. SaaS (Software As A Service)
 B. Workstation Operating System
