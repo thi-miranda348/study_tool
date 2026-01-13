@@ -818,12 +818,12 @@
       <div class="top-bar">
         <div class="title-bar">
           <span class="title-icon">📚</span>
-          <span id="appTitle">Quiz Master</span>
+          <span id="appTitle">Study Quiz</span>
         </div>
         <div class="top-actions">
-          <button class="btn btn-primary" onclick="app.startExam()">🚀 Start Exam</button>
-          <button class="btn" onclick="app.showExamHistory()">📊 History</button>
-          <button class="btn" onclick="app.resetProgress()">🔄 Reset Progress</button>
+          <button class="btn btn-primary" onclick="app.startExam()">Exam</button>
+          <button class="btn" onclick="app.showExamHistory()">History</button>
+          <button class="btn" onclick="app.resetProgress()">Reset</button>
           <button class="btn theme-toggle btn-icon" onclick="app.toggleTheme()">◐</button>
         </div>
       </div>
@@ -882,8 +882,8 @@
 
   <div class="exam-actions" id="examActions">
     <span class="score-display" id="scoreDisplay"></span>
-    <button class="btn btn-primary" id="btnSubmit" onclick="app.submitExam()">Submit & Score</button>
-    <button class="btn" onclick="app.exitExam()">Exit Exam</button>
+    <button class="btn btn-primary" id="btnSubmit" onclick="app.submitExam()">Submit</button>
+    <button class="btn" onclick="app.exitExam()">Exit</button>
   </div>
 
   <div class="modal" id="historyModal">
@@ -1025,7 +1025,7 @@
     // ========== MAIN APPLICATION ==========
     const app = {
       // Configuration
-      ITEMS_PER_PAGE: 60,
+      ITEMS_PER_PAGE: 100,
 
       // State
       allQuestions: [],
@@ -1321,7 +1321,7 @@
         this.currentPage = 1;
 
         // Update UI
-        document.getElementById('appTitle').textContent = '⏱️ Exam in Progress';
+        document.getElementById('appTitle').textContent = 'Exam';
         document.getElementById('examActions').classList.add('active');
         document.getElementById('btnSubmit').style.display = 'inline-flex';
         document.getElementById('scoreDisplay').textContent = '';
