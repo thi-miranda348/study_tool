@@ -124,6 +124,45 @@
       flex-wrap: wrap;
     }
 
+    /* ========== HAMBURGER MENU ========== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 3px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .menu-divider {
+      display: none;
+      height: 1px;
+      background: var(--border);
+      margin: 0.5rem 0;
+    }
+
     /* ========== CONTROLS ========== */
     .controls {
       display: flex;
@@ -131,11 +170,7 @@
       gap: 1.5rem;
     }
 
-    .search-row {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
+
 
     .search-group {
       display: flex;
@@ -702,9 +737,7 @@
         align-items: center;
       }
 
-      .search-row {
-        flex: 1;
-      }
+
 
       .pagination-row {
         flex-shrink: 0;
@@ -775,6 +808,53 @@
         flex-direction: row;
         gap: 1rem;
       }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .top-actions {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        background: var(--bg);
+        border-left: 1px solid var(--border);
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.2rem;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+      }
+
+      .top-actions.active {
+        right: 0;
+      }
+
+      .top-actions .btn {
+        width: 100%;
+      }
+
+      .menu-divider {
+        display: block;
+      }
+
+      .top-actions .input-bold,
+      .top-actions .input-wrapper {
+        width: 100%;
+      }
+
+      .top-actions select.input-bold {
+        width: 100%;
+      }
     }
 
     @media (max-width: 480px) {
@@ -820,29 +900,31 @@
           <span class="title-icon">📚</span>
           <span id="appTitle">Study Quiz</span>
         </div>
+        <button class="hamburger" onclick="app.toggleMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="top-actions">
           <button class="btn btn-primary" onclick="app.startExam()">Exam</button>
           <button class="btn" onclick="app.showExamHistory()">History</button>
           <button class="btn" onclick="app.resetProgress()">Reset</button>
           <button class="btn theme-toggle btn-icon" onclick="app.toggleTheme()">◐</button>
+
+          <!-- Add these search elements -->
+          <div class="menu-divider"></div>
+          <select id="tagFilter" class="input-bold" onchange="app.handleSearch()">
+            <option value="ALL">All Topics</option>
+          </select>
+          <div class="input-wrapper">
+            <span class="input-icon">🔍</span>
+            <input type="text" id="searchInput" class="input-bold input-with-icon" placeholder="Search questions..."
+              onkeyup="app.handleSearch()">
+          </div>
         </div>
       </div>
 
       <div class="controls">
-        <div class="search-row">
-          <div class="search-group">
-            <select id="tagFilter" class="input-bold" onchange="app.handleSearch()">
-              <option value="ALL">All Topics</option>
-            </select>
-
-            <div class="input-wrapper">
-              <span class="input-icon">🔍</span>
-              <input type="text" id="searchInput" class="input-bold input-with-icon" placeholder="Search questions..."
-                onkeyup="app.handleSearch()">
-            </div>
-          </div>
-        </div>
-
         <div class="pagination-row">
           <button class="btn btn-icon" onclick="app.prevPage()">←</button>
           <span class="page-counter" id="pageInfo">1/1</span>
@@ -1530,11 +1612,39 @@
         if (StorageManager.getTheme() === 'dark') {
           document.body.classList.add('dark-mode');
         }
-      }
+      },
+
+      toggleMenu() {
+        const menu = document.querySelector('.top-actions');
+        const hamburger = document.querySelector('.hamburger');
+        menu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+
+        // Close menu after selecting an action (except for search/filter interactions)
+        const buttons = menu.querySelectorAll('.btn:not(.theme-toggle)');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            menu.classList.remove('active');
+            hamburger.classList.remove('active');
+          }, { once: true });
+        });
+      },
     };
 
     // ========== INITIALIZE APP ==========
     window.onload = () => app.init();
+
+    document.addEventListener('click', (e) => {
+      const menu = document.querySelector('.top-actions');
+      const hamburger = document.querySelector('.hamburger');
+
+      if (menu && menu.classList.contains('active') &&
+        !menu.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+        menu.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
   </script>
 </body>
 
