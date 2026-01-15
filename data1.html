@@ -84,7 +84,6 @@
     /* ========== HEADER ========== */
     .fixed-header {
       position: sticky;
-      overflow-x: hidden;
       top: 0;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
@@ -146,16 +145,17 @@
     .hamburger {
       display: none;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 8px;
+      padding: 10px;
       z-index: 1001;
+      position: relative;
     }
 
     .hamburger span {
-      width: 24px;
+      width: 28px;
       height: 3px;
       background: var(--text);
       border-radius: 2px;
@@ -163,7 +163,7 @@
     }
 
     .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(7px, 7px);
+      transform: rotate(45deg) translate(8px, 8px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -171,14 +171,14 @@
     }
 
     .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
+      transform: rotate(-45deg) translate(8px, -8px);
     }
 
     .menu-divider {
       display: none;
       height: 1px;
       background: var(--border);
-      margin: 0.5rem 0;
+      margin: 1.5rem 0;
     }
 
     /* ========== CONTROLS ========== */
@@ -187,8 +187,6 @@
       flex-direction: column;
       gap: 1rem;
     }
-
-
 
     .search-group {
       display: flex;
@@ -202,7 +200,7 @@
       flex: 1;
     }
 
-    .input-icon {
+    /* .input-icon {
       position: absolute;
       left: 1.6rem;
       top: 50%;
@@ -210,7 +208,7 @@
       color: var(--text-light);
       font-size: 1.6rem;
       pointer-events: none;
-    }
+    } */
 
     .input-bold {
       width: 100%;
@@ -699,8 +697,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 998;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -867,22 +865,19 @@
         position: fixed;
         top: 0;
         right: -100%;
-        /* Menu ẩn bên ngoài */
-        width: 280px;
+        width: 300px;
         max-width: 85vw;
-        /* Thêm dòng này để tránh menu quá rộng */
         background: var(--bg);
         border-left: 1px solid var(--border);
-        padding: 2rem;
+        padding: 8rem 2rem 2rem;
         flex-direction: column;
         gap: 1.2rem;
         transition: right 0.3s ease;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
         height: 100vh;
         overflow-y: auto;
-        z-index: 1000;
+        z-index: 999;
         will-change: transform;
-        /* Thêm dòng này để tối ưu animation */
       }
 
       .top-actions.active {
@@ -891,6 +886,9 @@
 
       .top-actions .btn {
         width: 100%;
+        justify-content: flex-start;
+        padding: 1.4rem 2rem;
+        font-size: 1.5rem;
       }
 
       .menu-divider {
@@ -967,7 +965,7 @@
             <option value="ALL">All Topics</option>
           </select>
           <div class="input-wrapper">
-            <span class="input-icon">🔍</span>
+            <!-- <span class="input-icon">🔍</span> -->
             <input type="text" id="searchInput" class="input-bold input-with-icon" placeholder="Search questions..."
               onkeyup="app.handleSearch()">
           </div>
