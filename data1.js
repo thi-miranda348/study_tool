@@ -56,9 +56,9 @@ C. Unlimited write operations
 >> Tag: Hardware
 ---
 What does an IT professional use NVM scheduling for?
-A. To improve the performance of the system
+*A. To improve the performance of the system
 B. To enhance the security of the system
-*C. To manage the allocation of nonvolatile memory
+C. To manage the allocation of nonvolatile memory
 D. To improve the compatibility of the system
 >> Explain: NVM scheduling involves managing input/output operations specifically for Non-Volatile Memory (like SSDs) to optimize performance and lifespan.
 >> Tag: Hardware
@@ -2517,14 +2517,6 @@ C. A database server
 >> Explain: A Domain Controller centralizes security authentication requests within a Windows domain.
 >> Tag: Operating Systems
 ---
-What is the role of the AAA servers?
-A. Store files and documents
-*B. Serve as gatekeepers and critical components to network security
-C. Serve web pages
-D. Manage databases
->> Explain: AAA servers act as security gatekeepers, verifying identity and permissions before granting network access.
->> Tag: Networking
----
 Which server service is not associated with AAA?
 A. RAS
 B. TACACS+
@@ -3283,14 +3275,6 @@ B. To avoid using technologies and operations that are really not required for y
 C. To decide on the complexity of the stack
 *D. All of the others
 >> Explain: Defining a tech stack helps in planning for scale, efficiency (avoiding bloat), and managing the complexity of the development process.
->> Tag: IDEs and Text Editors
----
-What is a full stack tech stack?
-A. It only consists of backend technologies
-*B. It consists of both frontend and backend technologies
-C. It only consists of database technologies
-D. It only consists of frontend technologies
->> Explain: Full stack developers or technologies cover the entire depth of the application, from the client-side interface to the server-side logic and database.
 >> Tag: IDEs and Text Editors
 ---
 What does JavaScript do in a web application?
@@ -4397,14 +4381,6 @@ C. Adware is a type of Trojan horse, while spyware is a type of computer virus
 >> Explain: While the line is blurry, Adware often gets "consent" buried in user agreements of free software, whereas Spyware is surreptitiously installed to steal sensitive data without the user knowing.
 >> Tag: Networking
 ---
-What is a computer worm?
-A. A type of software that helps secure browsing
-B. A type of software that tracks data of browsing habits
-*C. A type of malware that replicates and spreads from one computer to another
-D. A type of software that helps improve network security
->> Explain: A worm is a standalone malware computer program that replicates itself in order to spread to other computers, unlike a virus which needs a host program.
->> Tag: Networking
----
 What is the difference between a DoS and a DDoS attack?
 A. DoS attacks are less harmful than DDoS attacks
 *B. DoS is performed by one machine while DDoS involves several computers
@@ -4932,14 +4908,6 @@ A. The type of medium it uses
 C. The signaling method and data formats used to carry its messages
 D. The number and types of connections sharing the channel
 >> Explain: Technical characteristics like bandwidth, medium type (copper/fiber), and protocols matter; physical cosmetic attributes like cable color do not affect transmission.
->> Tag: Networking
----
-What are the types of communication channel medium?
-A. Wireless and wired
-*B. Guided and unguided
-C. Analog and digital
-D. Simplex and duplex
->> Explain: In networking theory, media is classified as "Guided" (wires/cables where the signal is contained) or "Unguided" (wireless/radio where the signal propagates freely).
 >> Tag: Networking
 ---
 What determines the sharing capability of a channel?
@@ -5752,14 +5720,6 @@ B. In a dedicated external hard drive.
 *C. In one or more files in the file systems provided by the VMM.
 D. In a physical disk partition.
 >> Explain: In modern Type 1 hypervisors (like ESXi or Hyper-V), the guest's hard drive is encapsulated into a virtual disk file (e.g., .vmdk or .vhdx) stored on the hypervisor's file system (like VMFS). 
->> Tag: Virtual Environment
----
-What is a limitation of live migration in virtualized environments?
-A. It disrupts the network connections of the guest.
-*B. It doesn't allow disk state to be transferred.
-C. It can only be performed on type 0 and type 1 hypervisors.
-D. It requires a significant amount of processing power.
->> Explain: In standard live migration, only the active memory and execution state of the VM are moved between hosts. The disk images themselves are not transferred; they must reside on shared storage (like a SAN or NAS) accessible by both hosts.
 >> Tag: Virtual Environment
 ---
 What type of hypervisor is VMware Workstation classified as?
@@ -6584,14 +6544,6 @@ B. Only in the storage array hardware
 C. Only in the host bus-adapter (HBA) hardware
 D. Only in the software layer of the operating system
 >> Explain: RAID can be implemented anywhere in the stack: Software (OS), Hardware Controller (HBA), or external SAN enclosures.
->> Tag: Hardware
----
-What is the purpose of a hot spare drive in a RAID system?
-A. To store redundant information for error correction
-B. To replicate data between separate sites for disaster recovery
-*C. To provide automatic replacement in case of drive failure
-D. To increase the performance of the RAID system
->> Explain: A hot spare is an idle drive connected to the system. If an active drive fails, the controller automatically grabs the hot spare and begins rebuilding data onto it immediately.
 >> Tag: Hardware
 ---
 What is a consideration for system designers when choosing a RAID level?
@@ -8003,14 +7955,6 @@ B. It deletes the existing file and creates a new one.
 *C. It outputs an error message and terminates abnormally.
 D. It prompts the user for an alternative file name.
 >> Explain: Standard behavior for command-line utilities when a critical resource (like an input file) is missing is to print an error to stderr and exit with an error code.
->> Tag: Operating Systems
----
-What does the loop in the program do?
-A. Prompts the user to enter file names.
-B. Deletes and recreates the output file repeatedly.
-C. Executing system calls rapidly in a sequence.
-*D. Reads from the input file and writes to the output file.
->> Explain: In a file copy program, the main loop repeatedly reads a chunk of data from the source and writes it to the destination until the end of the file is reached.
 >> Tag: Operating Systems
 ---
 What is an API in the context of application programming?
@@ -11028,14 +10972,6 @@ D. HTML, Python, C++
 >> Explain: The standard frontend web development stack consists of HTML (structure), CSS (styling), and JavaScript (interactivity).
 >> Tag: IDEs and Text Editors
 ---
-What is the main function of flash memory in routers and switches?
-A. Storing compressed data
-*B. Providing a nonvolatile storage option
-C. Booting the device
-D. Facilitating configuration sessions
->> Explain: Flash memory is used as non-volatile storage to hold the operating system image (like Cisco IOS) and configuration files so they are preserved when power is lost.
->> Tag: Hardware
----
 What is the purpose of unlocking the taskbar in Windows?
 A. To access the Run dialog box
 *B. To move the position of the taskbar
@@ -11052,22 +10988,6 @@ D. To compile source files into object files
 >> Explain: The linker takes one or more object files generated by a compiler and combines them into a single executable program.
 >> Tag: IDEs and Text Editors
 ---
-What is the purpose of taking a "team temperature" in a development project?
-A. To ensure everyone is working hard
-B. To measure the team's performance
-*C. To find issues before they affect the project
-D. To maintain a constant workflow
->> Explain: In Agile methodologies, checking the "team temperature" or morale helps identify burnout or conflicts early so they can be addressed before impacting the project's success.
->> Tag: Non-functional Requirements
----
-What happens once a Java .class file passes verification in the JVM?
-A. It is transferred to another system for execution
-B. It is stored for later use
-C. It is loaded back into the class loader
-*D. It is run by the Java interpreter
->> Explain: After the bytecode verifier ensures the code is valid and safe, the Java interpreter (or JIT compiler) executes the instructions.
->> Tag: IDEs and Text Editors
----
 What does the loop in the program do?
 A. Prompts the user to enter file names.
 *B. Executes system calls rapidly in a sequence.
@@ -11076,35 +10996,11 @@ D. Deletes and recreates the output file repeatedly.
 >> Explain: A loop causing high system load often executes system calls (like fork()) rapidly.
 >> Tag: IDEs and Text Editors
 ---
-Where should fileshares be located in a network?
-*A. On the internal network
-B. In a separate, isolated network
-C. On the external network
-D. In the screened subnet
->> Explain: File shares containing sensitive internal data should be placed on the private internal network, protected by firewalls, not exposed externally or in the DMZ.
->> Tag: Networking
----
-What is the equivalent of the calculator in the Little Man Computer in a CPU?
-*A. Accumulator
-B. Memory data register (MDR)
-C. Memory address register (MAR)
-D. Instruction register (IR)
->> Explain: The Accumulator is the register where arithmetic and logic results are stored, acting like the calculator's display/working area.
->> Tag: Hardware
----
-What does Domain Name System (DNS) do in networking?
-*A. Translates URLs and email addresses to a universal set of addresses
-B. Assigns dynamic IP addresses
-C. Breaks the message into packets
-D. Relays packets through intermediate nodes
->> Explain: DNS resolves human-readable hostnames (like www.google.com) into machine-readable IP addresses.
->> Tag: Networking
----
 What are the types of communication channel medium?
-A. Guided and unguided
+*A. Guided and unguided
 B. Simplex and duplex
 C. Analog and digital
-*D. Wireless and wired
+D. Wireless and wired
 >> Explain: Communication media are broadly categorized into wired (cables/guided) and wireless (radio waves/unguided).
 >> Tag: Networking
 ---
@@ -11115,22 +11011,6 @@ C. Windows 8.1
 D. Windows 8
 >> Explain: To perform a direct upgrade, Windows 7 must be updated to at least Service Pack 1.
 >> Tag: Operating Systems
----
-What are the two main categories of encryption algorithms?
-A. Network availability and access control cryptography
-B. Intrusion and Confidentiality cryptography
-*C. Public key and private key cryptography
-D. Authentication and Data integrity cryptography
->> Explain: Cryptography is primarily divided into Symmetric (Private key) and Asymmetric (Public key) algorithms.
->> Tag: Non-functional Requirements
----
-Where can the AAA services be implemented?
-A. Dedicated server machine
-B. Wireless router or access point
-*C. All of the others
-D. Ethernet switch
->> Explain: Authentication, Authorization, and Accounting (AAA) can be handled by a dedicated server (like RADIUS) or locally on network devices like routers and switches.
->> Tag: Networking
 ---
 What is the advantage of a network installation for deploying applications on multiple PCs simultaneously?
 A. It ensures reporting services for installation status.
@@ -11188,22 +11068,6 @@ C. A type of software
 >> Explain: A tech stack refers to the combination of software products and programming languages used to build a web or mobile application (e.g., LAMP stack).
 >> Tag: IDEs and Text Editors
 ---
-What is the purpose of a thread inspector in an IDE?
-A. To load program and libraries into memory
-B. To generate random numbers in your program
-*C. To suspend, resume, and see the status of each thread being executed by a program
-D. To record changes that have been made to a program file
->> Explain: Thread inspectors are debugging tools that allow developers to monitor and control concurrent threads to solve race conditions or deadlocks.
->> Tag: IDEs and Text Editors
----
-What is one advantage of using diskless clients in a DFS?
-*A. It lowers cost as client machines require no disks.
-B. It eliminates the need for a server.
-C. It simplifies the boot protocols.
-D. It enhances performance due to the use of a network rather than a local disk.
->> Explain: Diskless workstations reduce hardware costs and simplify management since there is no local hard drive to maintain or fail.
->> Tag: Hardware
----
 What are the two forms of application virtualization mentioned in the text?
 *A. Legacy software virtualization and in-platform virtualization
 B. Linux software virtualization and cross-platform virtualization
@@ -11211,14 +11075,6 @@ C. Windows software virtualization and cross-platform virtualization
 D. Legacy software virtualization and cross-platform virtualization
 >> Explain: Application virtualization typically covers isolating legacy apps to run on new OSs, or streaming apps (in-platform) to prevent conflicts.
 >> Tag: Virtual Environment
----
-What are the two most common types of user interfaces?
-A. Graphical user interface and text-based interface
-*B. Command line interface and graphical user interface
-C. Touch-based interface and command line interface
-D. Text-based interface and point-and-click interface
->> Explain: The two primary paradigms for computer interaction are the Command Line Interface (CLI) and the Graphical User Interface (GUI).
->> Tag: Customization
 ---
 What are some examples of parameters that might be used in a sysgen procedure?
 A. The size of the system's hard drive
@@ -11244,28 +11100,12 @@ D. Store files and documents
 >> Explain: AAA servers control who is allowed into the network (Authentication) and what they can do (Authorization), acting as security gatekeepers.
 >> Tag: Networking
 ---
-How does a backbone network improve the speed for individual users in a wireless network?
-A. By increasing the range of an individual access point
-B. By increasing the bandwidth of the network
-*C. By distributing multiple access points over a large area, decreasing the number of users sharing any single point
-D. By sharing a single access point among more users
->> Explain: A high-speed backbone connects multiple Access Points (APs), allowing the load to be spread across many APs so individual users don't congest a single point.
->> Tag: Networking
----
 What is a computer worm?
 *A. A type of malware that replicates and spreads from one computer to another
 B. A type of software that tracks data of browsing habits
 C. A type of software that helps improve network security
 D. A type of software that helps secure browsing
 >> Explain: A worm is self-replicating malware that spreads across networks without requiring a host program or user action.
->> Tag: Networking
----
-Which of the following services can be typically provided by a UTM device?
-A. Web browsing history tracking
-B. Email spam filtering
-C. Content creation
-*D. Gateway antimalware
->> Explain: Unified Threat Management (UTM) devices combine multiple security features, including firewall, intrusion prevention, and gateway antivirus/antimalware.
 >> Tag: Networking
 ---
 What happens when a new version of an OS is released?
@@ -11275,22 +11115,6 @@ B. Support for both old and new OS will continue.
 D. Support for both old and new OS will stop.
 >> Explain: Vendors typically continue to support the previous OS version for a transition period (often years) after a new version is released.
 >> Tag: Operating Systems
----
-What are some roles servers can play in a network?
-A. Firewall, file server
-B. Web server, print server
-C. Email server, database server
-*D. All of the others
->> Explain: Servers can be dedicated to many specific roles, including File, Print, Web, Mail, Database, and Security (Firewall/Proxy).
->> Tag: Networking
----
-What is a rootkit?
-A. A type of software that helps improve network security
-*B. A collection of software tools that enables remote control and administration-level access over a computer or computer networks
-C. A type of malware that replicates and spreads from one computer to another
-D. A type of software that tracks data of browsing habits
->> Explain: A rootkit is designed to hide its existence while providing an attacker with privileged (root/admin) access to a computer.
->> Tag: Networking
 ---
 What is a limitation of live migration in virtualized environments?
 *A. It doesn't allow disk state to be transferred.
@@ -11412,14 +11236,6 @@ D. To store redundant information for error correction
 >> Explain: A hot spare is an idle drive that automatically takes over if an active drive fails, allowing the RAID array to rebuild immediately.
 >> Tag: Hardware
 ---
-How can a secure network be established for Network Hardening?
-A. By not configuring firewalls
-B. By decreasing the use of antivirus applications
-C. By allowing access to all users for all functions
-*D. By establishing an intrusion detection system in the communication channel
->> Explain: Network hardening involves monitoring traffic; an Intrusion Detection System (IDS) is a critical component for identifying malicious activity.
->> Tag: Networking
----
 What are constantly running system-program processes known as?
 A. Communications programs
 B. Background services
@@ -11427,14 +11243,6 @@ C. File management programs
 *D. Services, subsystems, or daemons
 >> Explain: Background processes that run independently of user sessions are called Daemons (Unix/Linux) or Services (Windows).
 >> Tag: Operating Systems
----
-What happens when a virtual machine is deleted?
-*A. The VMM first frees up any used disk space and then removes the configuration associated with the virtual machine.
-B. The allocated resources are returned to the main system.
-C. The hypervisor is removed and the system reverts to a physical state.
-D. The virtual machine's memory is wiped clean.
->> Explain: Deleting a VM involves removing its configuration file from the hypervisor and deleting the associated virtual hard disk files.
->> Tag: Virtual Environment
 ---
 What is the preeminent leader among removable memory card formats?
 A. microSD

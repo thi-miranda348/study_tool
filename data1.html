@@ -13,16 +13,26 @@
 
   <style>
     /* ========== BASE SETUP ========== */
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
     html {
       font-size: 62.5%;
       box-sizing: border-box;
     }
 
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
+
 
     :root {
       --bg: #FFFFFF;
@@ -51,26 +61,34 @@
     }
 
     body {
+      overflow-x: hidden;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 1.6;
       padding: 0;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
       transition: background-color 0.3s ease, color 0.3s ease;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
+    .top-actions,
+    .modal,
+    .exam-actions {
+      max-width: none !important;
+    }
+
     /* ========== HEADER ========== */
     .fixed-header {
       position: sticky;
+      overflow-x: hidden;
       top: 0;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      padding: 1.8rem 2rem;
+      padding: 1.2rem 1.6rem;
       z-index: 1000;
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
@@ -97,7 +115,7 @@
     }
 
     .title-bar {
-      font-size: 2.6rem;
+      font-size: 2rem;
       font-weight: 900;
       letter-spacing: -0.5px;
       color: var(--blue);
@@ -167,7 +185,7 @@
     .controls {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
 
@@ -200,10 +218,11 @@
       border: 2px solid var(--border);
       border-radius: 12px;
       font-weight: 600;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       background: var(--bg);
       color: var(--text);
       outline: none;
+      min-height: 48px;
       transition: all 0.2s ease;
     }
 
@@ -239,12 +258,12 @@
 
     .page-counter {
       font-weight: 800;
-      font-size: 1.5rem;
-      padding: 1.2rem 2.4rem;
+      font-size: 1.3rem;
+      padding: 1rem 1.6rem;
       background: var(--blue);
       color: #FFFFFF;
       border-radius: 10px;
-      min-width: 10rem;
+      min-width: 8rem;
       text-align: center;
       box-shadow: var(--shadow-md);
     }
@@ -254,7 +273,8 @@
       background: var(--bg);
       border: 2px solid var(--border);
       color: var(--text);
-      padding: 1.2rem 2rem;
+      padding: 1.6rem 2.4rem;
+      min-height: 48px;
       cursor: pointer;
       font-weight: 700;
       border-radius: 10px;
@@ -305,6 +325,7 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 3rem 2rem;
+      overflow-x: hidden;
     }
 
     /* ========== STATS BAR ========== */
@@ -352,8 +373,8 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 3rem;
-      margin-bottom: 2.4rem;
+      padding: 2rem 1.6rem;
+      margin-bottom: 1.6rem;
       box-shadow: var(--shadow-md);
       transition: all 0.3s ease;
       animation: fadeInUp 0.4s ease;
@@ -529,9 +550,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1rem;
       margin: 4rem 0;
-      padding-bottom: 3rem;
+      padding: 2rem 1.6rem;
     }
 
     /* ========== EXAM MODE STYLES ========== */
@@ -556,13 +577,13 @@
       left: 0;
       right: 0;
       background: white;
-      padding: 1.5rem;
+      padding: 1.2rem 1rem;
       border-top: 2px solid var(--border);
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
       display: none;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
       z-index: 2000;
       flex-wrap: wrap;
     }
@@ -603,10 +624,10 @@
     .modal-content {
       background: var(--bg);
       border-radius: 16px;
-      padding: 3rem;
-      max-width: 600px;
-      width: 90%;
-      max-height: 80vh;
+      padding: 2rem 1.6rem;
+      max-width: none;
+      width: 95%;
+      max-height: 90vh;
       overflow-y: auto;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       animation: slideUp 0.3s ease;
@@ -668,6 +689,25 @@
       display: flex;
       gap: 1rem;
       justify-content: flex-end;
+    }
+
+    /* ========== OVERLAY FOR MOBILE MENU ========== */
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      display: block;
+      opacity: 1;
     }
 
     /* ========== EMPTY STATE ========== */
@@ -785,7 +825,8 @@
       }
 
       .q-text {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
       }
 
       .option {
@@ -802,11 +843,14 @@
       .stats-bar {
         flex-direction: column;
         gap: 1.5rem;
+        padding: 1.2rem 1.6rem;
+        overflow-x: auto;
       }
 
       .stat-item {
         flex-direction: row;
         gap: 1rem;
+        min-width: 80px
       }
 
       .hamburger {
@@ -821,9 +865,12 @@
 
       .top-actions {
         position: fixed;
-        top: 70px;
+        top: 0;
         right: -100%;
+        /* Menu ẩn bên ngoài */
         width: 280px;
+        max-width: 85vw;
+        /* Thêm dòng này để tránh menu quá rộng */
         background: var(--bg);
         border-left: 1px solid var(--border);
         padding: 2rem;
@@ -831,8 +878,11 @@
         gap: 1.2rem;
         transition: right 0.3s ease;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-        height: calc(100vh - 70px);
+        height: 100vh;
         overflow-y: auto;
+        z-index: 1000;
+        will-change: transform;
+        /* Thêm dòng này để tối ưu animation */
       }
 
       .top-actions.active {
@@ -933,6 +983,10 @@
       </div>
     </div>
   </div>
+
+  <div class="menu-overlay" id="menuOverlay" onclick="app.closeMenu()"></div>
+
+
 
   <div class="container">
     <div class="stats-bar">
@@ -1124,12 +1178,20 @@
           return;
         }
 
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+          viewport.setAttribute('content',
+            'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+
         this.loadData();
         this.loadStudiedQuestions();
         this.populateTagDropdown();
         this.updateStats();
         this.renderPage();
         this.loadTheme();
+
+
       },
 
       loadData() {
@@ -1560,6 +1622,7 @@
           this.currentPage--;
           this.renderPage();
         }
+        window.scrollTo({ top: 0, behavior: 'instant' });
       },
 
       nextPage() {
@@ -1568,6 +1631,7 @@
           this.currentPage++;
           this.renderPage();
         }
+        window.scrollTo({ top: 0, behavior: 'instant' });
       },
 
       handleSearch() {
@@ -1617,18 +1681,41 @@
       toggleMenu() {
         const menu = document.querySelector('.top-actions');
         const hamburger = document.querySelector('.hamburger');
+        const overlay = document.getElementById('menuOverlay');
+
         menu.classList.toggle('active');
         hamburger.classList.toggle('active');
+        overlay.classList.toggle('active');  // Thêm dòng này
 
-        // Close menu after selecting an action (except for search/filter interactions)
+        // Prevent body scroll when menu open
+        if (menu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+
+        // Close menu after selecting an action
         const buttons = menu.querySelectorAll('.btn:not(.theme-toggle)');
         buttons.forEach(btn => {
           btn.addEventListener('click', () => {
             menu.classList.remove('active');
             hamburger.classList.remove('active');
+            overlay.classList.remove('active');  // Thêm dòng này
+            document.body.style.overflow = '';  // Thêm dòng này
           }, { once: true });
         });
       },
+      closeMenu() {
+        const menu = document.querySelector('.top-actions');
+        const hamburger = document.querySelector('.hamburger');
+        const overlay = document.getElementById('menuOverlay');
+
+        menu.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      },
+
     };
 
     // ========== INITIALIZE APP ==========
@@ -1643,8 +1730,22 @@
         !hamburger.contains(e.target)) {
         menu.classList.remove('active');
         hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
+    // Close menu on scroll
+    window.addEventListener('scroll', () => {
+      const menu = document.querySelector('.top-actions');
+      const hamburger = document.querySelector('.hamburger');
+
+      if (menu?.classList.contains('active')) {
+        menu.classList.remove('active');
+        hamburger?.classList.remove('active');
+        overlay?.classList.remove('active');
+      }
+    });
+
   </script>
 </body>
 
