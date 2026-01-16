@@ -1333,13 +1333,17 @@
         const studiedData = this.studiedQuestions[q.id];
         const examAnswer = this.currentExam?.answers[q.id];
 
-        if (this.mode === 'study' && studiedData) {
-          if (optionIndex === q.ans) classes.push('correct');
-          if (studiedData.answer === optionIndex && optionIndex !== q.ans) {
-            classes.push('wrong');
-          }
-          classes.push('disabled');
-        } else if (this.mode === 'exam') {
+        // if (this.mode === 'study' && studiedData) {
+        //   if (optionIndex === q.ans) classes.push('correct');
+        //   if (studiedData.answer === optionIndex && optionIndex !== q.ans) {
+        //     classes.push('wrong');
+        //   }
+        //   classes.push('disabled');
+        // }
+        if (this.mode === 'study') {
+          if (optionIndex === q.ans) classes.push('correct')
+        }
+        else if (this.mode === 'exam') {
           if (examAnswer === optionIndex) classes.push('selected');
         } else if (this.mode === 'exam-review') {
           if (optionIndex === q.ans) classes.push('correct');
@@ -1360,7 +1364,8 @@
 
       shouldShowExplanation(q) {
         if (this.mode === 'study') {
-          return !!this.studiedQuestions[q.id];
+          // return !!this.studiedQuestions[q.id];
+          return true;
         }
         return this.mode === 'exam-review';
       },
