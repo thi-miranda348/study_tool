@@ -1033,7 +1033,7 @@
     </div>
   </div>
 
-  <script src="data1.js"></script>
+  <script src="data2.js"></script>
 
   <script>
     // ========== APPLICATION STATE MANAGER ==========
@@ -1089,16 +1089,15 @@
     // ========== EXAM GENERATOR ==========
     const ExamGenerator = {
       WEIGHTS: {
-        "Hardware": 7,
-        "Operating Systems": 7,
-        "Virtual Environment": 6,
-        "Networking": 10,
-        "Non-functional Requirements": 5,
-        "IDEs and Text Editors": 5,
-        "Customization": 10,
-        "Cloud Computing": 10
+        "Understand the key concepts of service management": 5,
+        "Understand how the ITIL guiding principles can help an organizationadopt and adapt service management": 6,
+        "Understand the four dimensions of service management": 2,
+        "Understand the purpose and components of the ITIL service value system": 1,
+        "Understand the activities of the service value chain,and how they interconnect": 2,
+        "Know the purpose and key terms of 15 ITIL practices": 7,
+        "Understand 7 ITIL practices": 17,
       },
-      TOTAL_QUESTIONS: 60,
+      TOTAL_QUESTIONS: 40,
 
       generate(allQuestions, studiedQuestions) {
         const questionsByTag = this.groupByTag(allQuestions);
@@ -1172,8 +1171,8 @@
 
       // ========== INITIALIZATION ==========
       init() {
-        if (typeof rawQuizData === 'undefined') {
-          console.error('data1.js not loaded');
+        if (typeof rawQuizData2 === 'undefined') {
+          console.error('data2.js not loaded');
           return;
         }
 
@@ -1194,9 +1193,9 @@
       },
 
       loadData() {
-        let fullData = rawQuizData;
-        if (typeof rawQuizData_Part2 !== 'undefined') {
-          fullData += "\n---\n" + rawQuizData_Part2;
+        let fullData = rawQuizData2;
+        if (typeof rawQuizData2_Part2 !== 'undefined') {
+          fullData += "\n---\n" + rawQuizData2_Part2;
         }
         this.allQuestions = this.parseData(fullData);
         this.filteredQuestions = [...this.allQuestions];
