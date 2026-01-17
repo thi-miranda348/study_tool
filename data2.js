@@ -949,7 +949,7 @@ B. A guiding principle is a mandatory rule
 C. A guiding principle is only used during the planning phase
 D. A guiding principle defines the organizational structure
 >> Explain: A guiding principle is a recommendation that guides an organization in all circumstances, regardless of changes in its goals, strategies, type of work, or management structure.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle is most affected by the customer experience (CX)?
 A. Start where you are
@@ -957,7 +957,7 @@ A. Start where you are
 C. Optimize and automate
 D. Keep it simple and practical
 >> Explain: The 'Focus on value' principle encompasses many perspectives, including the experience of customers and users (CX).
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Dion Training Solutions wants to build a new service to automatically fulfill exam voucher orders for students. Currently, exam vouchers are fulfilled manually by a staff member... The team lead takes an inventory of the current services, processes, and procedures that are being used... What guiding principle best describes this scenario?
 A. Focus on value
@@ -965,7 +965,7 @@ B. Collaborate and promote visibility
 *C. Start where you are
 D. Think and work holistically
 >> Explain: 'Start where you are' suggests that you should look at what you already have available to see if it can be replicated or expanded instead of starting from scratch.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Dion Training Solutions has decided to create an online course... The company developed their curriculum and then invited 50 students to participate in live training to determine if the training was effective... the instructor rewrote that portion of the curriculum. Which guiding principle is being demonstrated?
 A. Keep it simple and practical
@@ -973,7 +973,7 @@ A. Keep it simple and practical
 C. Optimize and automate
 D. Start where you are
 >> Explain: By running a pilot (live training) and using the feedback to rewrite the curriculum, they are progressing iteratively with feedback.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 You are working to design a new service... you form a small team with relevant stakeholders from the human resources, information technology, sales, and other relevant departments... Which guiding principle best describes this scenario?
 A. Focus on value
@@ -981,7 +981,7 @@ A. Focus on value
 C. Think and work holistically
 D. Keep it simple and practical
 >> Explain: Involving the right people (stakeholders from various departments) demonstrates the principle of 'Collaborate and promote visibility'.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 John is currently working to create a new service... John is responsible for the payment portion... Sally is responsible for the digital product fulfillment... Which of the following should John do in order to follow the principle of 'think and work holistically'?
 A. Focus only on his payment module
@@ -989,7 +989,7 @@ B. Design the payment module to be as fast as possible regardless of the rest
 *C. Work with Sally to ensure the payment and fulfillment systems integrate smoothly
 D. Ask management to fire Sally so he can do it all
 >> Explain: 'Think and work holistically' implies recognizing that no service, practice, process, department, or supplier stands alone. They must work together (integrate).
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which of these are a key focus of the ‘organization and people’ dimension?
 A. Contracts and agreements
@@ -1021,7 +1021,7 @@ A. Service value system
 C. Continual improvement model
 D. Guiding principles
 >> Explain: The Service Value Chain is the operating model that defines the key activities (Plan, Improve, Engage, Design & Transition, Obtain/Build, Deliver & Support).
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which value chain activity includes portfolio decisions for design and transition?
 *A. Plan
@@ -1029,7 +1029,7 @@ B. Engage
 C. Improve
 D. Obtain/build
 >> Explain: The 'Plan' activity encompasses portfolio decisions regarding the design and transition of services.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which step of the continual improvement model states that "each improvement initiative should support the organization's goals and objectives"?
 *A. What is the vision?
@@ -1405,7 +1405,7 @@ B. Engage
 *C. Service request management
 D. Improve
 >> Explain: Service request management is a practice, not a service value chain activity. The 6 activities are Plan, Improve, Engage, Design & Transition, Obtain/Build, and Deliver & Support.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which value chain activity ensures continual improvement of products, services, and practices across all value chain activities and the four dimensions of service management?
 *A. Improve
@@ -1413,7 +1413,7 @@ B. Plan
 C. Obtain/build
 D. Design and transition
 >> Explain: The 'improve' activity ensures continual improvement of products, services, and practices across all value chain activities and the four dimensions of service management.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Betsy has been hired by your company to lead the process improvement efforts... she begins to analyze your current resources, processes, and metrics. What step of the continual improvement model is Betsy performing?
 A. What is the vision?
@@ -1653,7 +1653,7 @@ B. Mandates
 C. Rules
 D. Standards
 >> Explain: Guiding principles are recommendations that can guide an organization in all circumstances.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 You have been asked to investigate an email service... you determine that the current service is not meeting its utility and warranty requirements. Which guiding principles best describes your actions in this scenario?
 A. Focus on value
@@ -1661,7 +1661,7 @@ B. Collaborate and promote visibility
 *C. Start where you are
 D. Optimize and automate
 >> Explain: By observing the *current* service objectively before making changes, you are applying 'Start where you are'.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 A small start-up... decided to release the app to get some initial feedback... continued to add one function every 3 weeks. What guiding principle best describes what the company was doing?
 A. Think and work holistically
@@ -1669,7 +1669,7 @@ A. Think and work holistically
 C. Keep it simple and practical
 D. Start where you are
 >> Explain: Releasing early to get feedback and adding features in steps is 'Progress iteratively with feedback'.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle is focused on increasing communication both within the project and outside of it?
 *A. Collaborate and promote visibility
@@ -1677,7 +1677,7 @@ B. Focus on value
 C. Optimize and automate
 D. Think and work holistically
 >> Explain: 'Collaborate and promote visibility' specifically addresses removing silos and increasing communication/transparency.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle is concerned with an understanding of how all the parts of an organization work together in an integrated way?
 A. Focus on value
@@ -1685,7 +1685,7 @@ A. Focus on value
 C. Keep it simple and practical
 D. Start where you are
 >> Explain: 'Think and work holistically' involves understanding how all the parts of an organization work together.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 You have just been promoted... The Service Desk is currently spending numerous hours per week creating reports... you eliminate the requirement to track and report on those metrics. Which guiding principle are you following in this scenario?
 A. Focus on value
@@ -1693,7 +1693,7 @@ B. Start where you are
 *C. Keep it simple and practical
 D. Optimize and automate
 >> Explain: Eliminating waste (metrics that provide no value) is a core part of 'Keep it simple and practical'.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which service management dimension is focused on an organization's relationships with other organizations in order to deliver its services?
 A. Organizations and people
@@ -1725,7 +1725,7 @@ B. Engage
 *C. Service request management
 D. Improve
 >> Explain: Service request management is a practice, not a value chain activity. The six activities are Plan, Improve, Engage, Design & Transition, Obtain/Build, and Deliver & Support.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which ITIL concept describes guiding principles?
 *A. Service value system
@@ -1765,7 +1765,7 @@ B. Start where you are
 *C. Collaborate and promote visibility
 D. Think and work holistically
 >> Explain: 'Collaborate and promote visibility' emphasizes the need to involve the right people (stakeholders) and ensure transparency and communication.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 A company is planning to launch a new service... instead of using a waterfall development method, they will use an Agile development method... relying on two-week timeboxes... What guiding principle best describes this scenario?
 A. Focus on value
@@ -1773,7 +1773,7 @@ A. Focus on value
 C. Optimize and automate
 D. Start where you are
 >> Explain: By breaking the project into two-week timeboxes and delivering smaller pieces to get feedback, they are progressing iteratively with feedback.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle states that there is likely something in the current services, processes, programs, projects, or organization that can be used to create the desired outcome for a new or redesigned service?
 A. Focus on value
@@ -1781,7 +1781,7 @@ A. Focus on value
 C. Think and work holistically
 D. Keep it simple and practical
 >> Explain: 'Start where you are' suggests looking at what already exists to see if it can be leveraged before building something new.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle may best be served by understanding the cost and financial consequences that a service consumer might face when choosing to use a service?
 *A. Focus on value
@@ -1789,7 +1789,7 @@ B. Start where you are
 C. Collaborate and promote visibility
 D. Optimize and automate
 >> Explain: 'Focus on value' implies understanding value from the customer's perspective, which includes the costs and risks they perceive.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Your organization is currently designing a new service... The team... has decided to focus on value during the design efforts. What best describes 'focus on value' in this context?
 A. Ensuring the service is profitable
@@ -1797,7 +1797,7 @@ B. Automating as much as possible
 *C. Understanding who the service consumer is and what they value
 D. Designing the service to be simple
 >> Explain: To focus on value, you must first know who the consumer is and what constitutes value for them.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Fill in the blank. [?] may simultaneously be removed from a service consumer and imposed on a service provider.
 A. Costs
@@ -2029,7 +2029,7 @@ B. Deliver and support
 *C. Design and transition
 D. Obtain/build
 >> Explain: 'Design and transition' ensures that products and services continually meet stakeholder expectations for quality, costs, and time to market.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Each time users attempt to log on to the domain using their username and password, they receive an error that 'the authentication server is not responding'. This is happening to multiple users across the network. How would you categorize this issue?
 *A. Incident
@@ -2045,7 +2045,7 @@ B. Engage
 *C. Service request management
 D. Improve
 >> Explain: Service request management is a practice, not a service value chain activity. The activities are Plan, Improve, Engage, Design & Transition, Obtain/Build, and Deliver & Support.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which value chain activity ensures that service components are available when and where they are needed and meet agreed specifications?
 A. Plan
@@ -2053,7 +2053,7 @@ B. Deliver and support
 *C. Obtain/build
 D. Design and transition
 >> Explain: The 'obtain/build' activity ensures that service components are available when and where they are needed and meet agreed specifications.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Your company is currently spending $1.2 million per year on energy to run its data center. The new CEO of the company wants the organization to become more environmentally friendly and reduce its energy consumption from commercial power sources such as coal and nuclear energy. To support this initiative, the IT Director has created a goal of reducing the power consumption in the data center to less than $1 million next year. In which step of the continual service model would the IT Director create this goal?
 A. Did we get there?
@@ -2293,7 +2293,7 @@ A. Rule
 C. Standard
 D. Law
 >> Explain: A guiding principle is a recommendation that guides an organization in all circumstances.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Fill in the blank. According to the guiding principles, "Everything that the organization does needs to map, directly or indirectly, to [?] for the stakeholders."
 A. Outcomes
@@ -2301,7 +2301,7 @@ A. Outcomes
 C. Profit
 D. Products
 >> Explain: The 'focus on value' principle states that everything must map to value for the stakeholders.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle says that the current state should be investigated and observed directly to make sure it is fully understood before you attempt to create a brand new service or process?
 A. Focus on value
@@ -2309,7 +2309,7 @@ B. Collaborate and promote visibility
 *C. Start where you are
 D. Optimize and automate
 >> Explain: 'Start where you are' emphasizes observing the current state directly before starting something new.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle recognizes the complexity of a system and seeks to understand the relationships between the various components that make up a service?
 A. Focus on value
@@ -2317,7 +2317,7 @@ A. Focus on value
 C. Keep it simple and practical
 D. Start where you are
 >> Explain: 'Think and work holistically' involves understanding the complexity and relationships between components.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle is focused on using the minimum number of steps to accomplish an objective?
 A. Focus on value
@@ -2325,7 +2325,7 @@ B. Start where you are
 *C. Keep it simple and practical
 D. Optimize and automate
 >> Explain: 'Keep it simple and practical' focuses on eliminating waste and using the minimum steps necessary.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Your company currently uses a paper-based process for allocating funding for authorized business travel... This entire process is currently done manually... You have decided to automate this process. Based on the principle of 'optimize and automate', how should you approach the automation of this existing process?
 A. Automate the process exactly as it is to save time immediately
@@ -2333,7 +2333,7 @@ A. Automate the process exactly as it is to save time immediately
 C. Hire more staff to handle the manual process
 D. Outsource the process
 >> Explain: The 'optimize and automate' principle states that you should simplify and optimize a process *before* automating it to avoid automating inefficiency.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which dimension of service management should be considered when deciding whether or not moving the organization's web server from an on-premise solution to the cloud is a good decision in terms of compliance and security?
 A. Organizations and people
@@ -2366,7 +2366,7 @@ C. Value chain activities are rigid and sequential
 D. Value chain activities are performed by a single team
 *A. Each value chain activity contributes to the value chain by transforming specific inputs into outputs
 >> Explain: The service value chain activities interconnect, with each activity receiving and providing triggers for further action (inputs/outputs).
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which value chain activity would best be used to categorize the actions of the service desk when they are responding to a consumer's request for assistance?
 A. Plan
@@ -2374,7 +2374,7 @@ B. Improve
 *C. Deliver and support
 D. Design and transition
 >> Explain: 'Deliver and support' includes the activity of ensuring that services are delivered and supported according to agreed specifications and stakeholders' expectations.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Which step of the continual improvement model is focused on outlining the steps that will be undertaken by the organization in order to achieve its goals and move the organization closer to achieving its vision?
 A. Where do we want to be?
@@ -2445,7 +2445,7 @@ A. Improve
 C. Design and transition
 D. Deliver and support
 >> Explain: The 'Obtain/build' activity ensures that service components (like the new browser software) are available and meet specifications. The actual deployment often spans obtain/build and deliver/support, but obtaining the upgrade is key here.
->> Tag: Understand the activities of the service value chain,and how they interconnect
+>> Tag: Understand the activities of the service value chain, and how they interconnect
 ---
 Your printer is currently out of toner... but it won't arrive for a few days. What would you classify this as?
 A. Incident
@@ -2613,7 +2613,7 @@ B. Every 3 years
 C. Never
 *D. Rarely (They are enduring recommendations)
 >> Explain: Guiding principles are universal and enduring; they shouldn't change often, if ever.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 What is the main benefit of following the guiding principle of 'progress iteratively with feedback'?
 *A. It allows the organization to react to changing needs and circumstances
@@ -2621,7 +2621,7 @@ B. It ensures that the entire project is completed before testing
 C. It reduces the need for stakeholder collaboration
 D. It simplifies the project management process
 >> Explain: Iterative progress allows for faster feedback loops and the ability to adapt to changes.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Your team is working on developing a new service... created an 'information radiator'... Which guiding principle is being demonstrated through the use of this 'information radiator'?
 A. Focus on value
@@ -2629,7 +2629,7 @@ A. Focus on value
 C. Start where you are
 D. Keep it simple and practical
 >> Explain: Making work visible (via information radiators/Kanban boards) is a key part of 'Collaborate and promote visibility'.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle requires coordination across the organization in order to best understand how a complicated service works?
 A. Focus on value
@@ -2637,7 +2637,7 @@ A. Focus on value
 C. Keep it simple and practical
 D. Optimize and automate
 >> Explain: Thinking and working holistically means understanding how all parts of the organization work together.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 You have been asked to create a standard process... Nancy recommends... "create a process for the most common three types... handle exception..." What guiding principle is Nancy recommending...?
 A. Focus on value
@@ -2645,7 +2645,7 @@ B. Start where you are
 *C. Keep it simple and practical
 D. Optimize and automate
 >> Explain: Nancy is suggesting not to overcomplicate the process for the 1% of exceptions. Keep it simple for the 99%.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Which guiding principle should you use to maximize the value of the work carried out by the human and technical resources within an organization?
 A. Focus on value
@@ -2653,7 +2653,7 @@ B. Start where you are
 *C. Optimize and automate
 D. Collaborate and promote visibility
 >> Explain: 'Optimize and automate' seeks to eliminate waste and maximize the efficacy of human and technical resources.
->> Tag: Understand how the ITIL guiding principles can help an organizationadopt and adapt service management
+>> Tag: Understand how the ITIL guiding principles can help an organization adopt and adapt service management
 ---
 Dion Training Solutions has two departments... Which dimension of service management is focused on how a company structures its human resources?
 *A. Organizations and people
