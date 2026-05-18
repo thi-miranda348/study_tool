@@ -1,0 +1,389 @@
+:root {
+    --primary-teal: #00bfa5;
+    --primary-hover: #009b86;
+    --bg-gradient: linear-gradient(135deg, #f8fcff 0%, #e0f2f9 100%);
+    --text-dark: #1a1a1a;
+    --text-muted: #666666;
+    --card-bg: #ffffff;
+    --toggle-bg: #eef2f5;
+}
+
+/* 1rem = 10px */
+html {
+    font-size: 62.5%; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    font-size: 1.6rem;
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-section {
+    max-width: 110rem;
+    width: 100%;
+}
+
+/* HEADER */
+.pricing-header h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05rem;
+}
+
+.pricing-header p {
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* CONTROLS (Toggle & Slider) */
+.controls-wrapper {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 40rem;
+}
+
+.control-label {
+    font-weight: 500;
+    margin-right: 1.5rem;
+}
+
+/* Segmented Toggle Pill */
+.billing-control {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-pill {
+    background: var(--toggle-bg);
+    border-radius: 3rem;
+    padding: 0.4rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.toggle-bg {
+    position: absolute;
+    width: 50%;
+    height: calc(100% - 0.8rem);
+    background: white;
+    border-radius: 2.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toggle-bg.is-annual {
+    transform: translateX(100%);
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.toggle-btn.active {
+    color: var(--text-dark);
+}
+
+.discount-badge {
+    position: absolute;
+    right: -1.5rem;
+    top: -1rem;
+    background: #cbf4f0;
+    color: var(--primary-teal);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1.2rem;
+}
+
+/* Slider */
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.team-size-value {
+    color: var(--primary-teal);
+    font-size: 1.8rem;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.6rem;
+    background: #cbd5e1;
+    border-radius: 0.3rem;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; /* Fixed */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--primary-teal);
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 191, 165, 0.4);
+    transition: transform 0.1s;
+}
+
+/* Standard slider thumb styling for cross-browser support */
+input[type=range]::-moz-range-thumb {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-teal);
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 191, 165, 0.4);
+    transition: transform 0.1s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* PRICING GRID */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 1.2rem;
+    padding: 4rem 3rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.03);
+    border: 0.1rem solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Active/Recommended Plan Styles */
+.card.active-plan {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 4rem rgba(0, 191, 165, 0.15);
+    border: 0.2rem solid var(--primary-teal);
+}
+
+.recommend-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-teal);
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.6rem 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.card.active-plan .recommend-banner {
+    transform: translateY(0);
+}
+
+/* Push title down when banner shows */
+.card.active-plan h2 {
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 2.9rem;
+    margin-bottom: 1rem;
+    transition: margin 0.3s;
+}
+
+.plan-desc {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    min-height: 4.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.price-box {
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-size: 2.4rem;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.price {
+    font-size: 5.6rem;
+    font-weight: 800;
+    letter-spacing: -0.2rem;
+}
+
+.period {
+    color: var(--text-muted);
+    font-size: 1.4rem;
+}
+
+.capacity-desc {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1.4rem;
+    background: var(--primary-teal);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.demo-link {
+    display: block;
+    text-align: start;
+    color: var(--primary-teal);
+    text-decoration: underline;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+.feature-title {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    content: "✓";
+    color: var(--primary-teal);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+
+/* Tablet Layout (Screens smaller than 900px) */
+@media (max-width: 900px) {
+    html {
+        font-size: 55%; 
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* Mobile Phone Layout (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; 
+    }
+
+    .controls-wrapper {
+        margin: 3rem;
+        width: 100%;
+    }
+
+    .pricing-grid {
+        /* Force a strict single-column stack on phones */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem; 
+        max-width: 100%;
+        margin: 0;
+    }
+    .card.active-plan {
+        transform: translateY(0);
+        box-shadow: 0 1rem 3rem rgba(0, 191, 165, 0.2);
+    }
+    
+    .price {
+        font-size: 4.8rem;
+    }
+}
+/* Mobile Phone Layout (Screens smaller than 425px) */
+@media (max-width: 425px) {
+    html {
+        font-size: 45%; 
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .pricing-header h1 {
+        font-size: 3.2rem;
+    }
+
+    .controls-wrapper {
+        margin: 3rem;
+        max-width: 80%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem; 
+        max-width: 90%;
+        margin: 2.4rem;
+    }
+
+    .price {
+        font-size: 4.8rem;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Dynamic Pricing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pricing-section">
+        <header class="pricing-header">
+            <h1>Managing your team<br>has never been easier.</h1>
+            <p>Pricing that grows with your team.<br>No hidden fees, no surprises—just value.</p>
+        </header>
+
+        <section class="controls-wrapper">
+            <div class="billing-control">
+                <span class="control-label">Billing:</span>
+                <div class="toggle-pill">
+                    <div class="toggle-bg" id="toggle-bg"></div>
+                    <button class="toggle-btn active" id="btn-monthly">Monthly</button>
+                    <button class="toggle-btn" id="btn-annual">Annual</button>
+                    <span class="discount-badge">-20%</span>
+                </div>
+            </div>
+
+            <div class="slider-control">
+                <div class="slider-header">
+                    <span class="control-label">Team Size:</span>
+                    <span class="team-size-value"><strong id="employee-count">10</strong> employees</span>
+                </div>
+                <input type="range" id="employee-slider" min="5" max="50" step="1" value="10">
+            </div>
+        </section>
+
+        <section class="pricing-grid">
+
+            <div class="card" id="card-basic">
+                <div class="recommend-banner">Best for Starters</div>
+                <h2>Basic</h2>
+                <p class="plan-desc">Ideal for small businesses starting with team management.</p>
+                <div class="price-box">
+                    <span class="currency">$</span>
+                    <span class="price" id="price-basic">32</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="capacity-desc">For <span class="emp-cap">10</span> employees</p>
+                <button class="btn-primary">Get started</button>
+
+                <a href="#" class="demo-link" style="visibility: hidden; pointer-events: none;">Book a Demo</a>
+
+                <div class="features">
+                    <p class="feature-title">Features:</p>
+                    <ul>
+                        <li>Real-time tracking</li>
+                        <li>Basic reports and analytics</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" id="card-pro">
+                <div class="recommend-banner">Recommended</div>
+                <h2>Pro</h2>
+                <p class="plan-desc">Designed for businesses needing extra control over their team.</p>
+                <div class="price-box">
+                    <span class="currency">$</span>
+                    <span class="price" id="price-pro">50</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="capacity-desc">For <span class="emp-cap">10</span> employees</p>
+                <button class="btn-primary">Get started</button>
+                <a href="#" class="demo-link">Book a Demo</a>
+
+                <div class="features">
+                    <p class="feature-title">Everything in Basic, plus:</p>
+                    <ul>
+                        <li>API access for integrations</li>
+                        <li>Advanced analytics</li>
+                        <li>Live chat support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" id="card-enterprise">
+                <div class="recommend-banner">Maximum Power</div>
+                <h2>Enterprise</h2>
+                <p class="plan-desc">Suitable for large-scale corporations with advanced needs.</p>
+                <div class="price-box">
+                    <span class="currency">$</span>
+                    <span class="price" id="price-enterprise">99</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="capacity-desc">For <span class="emp-cap">10</span> employees</p>
+                <button class="btn-primary">Get started</button>
+                <a href="#" class="demo-link">Book a Demo</a>
+
+                <div class="features">
+                    <p class="feature-title">Everything in Pro, plus:</p>
+                    <ul>
+                        <li>Custom onboarding</li>
+                        <li>Dedicated account manager</li>
+                        <li>Customizable reports</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
